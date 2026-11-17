@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="deck" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اليوم 1 · النزاهة وخريطة الأدبيات · الذكاء الاصطناعي للباحثين والعمل العلمي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="day1.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<div class="deck" data-course="الذكاء الاصطناعي للباحثين والعمل العلمي" data-track="fluency" data-day="اليوم 1">
+<section class="slide title" id="title" data-auto="title" data-label="الترحيب" data-n="1">
+  <div class="kicker">أكاديمية سدايا · الذكاء الاصطناعي للباحثين والعمل العلمي</div>
+  <h1>النزاهة وخريطة الأدبيات</h1>
+  <p class="lead mt">اليوم 1: تحكم في اثني عشر استخدامًا للذكاء الاصطناعي ببطاقة سياسة المعهد، ثم توثّق بحثًا وتقيس استدعاء مساعد الفرز على خمسين سجلًا فرزتها بيدك</p>
+  <div class="meta"><span class="track">مسار الطلاقة في البيانات والذكاء الاصطناعي</span><span>يومان تدريبيان + يوم للمشروع الختامي</span><span>جلستان · مختبران</span><span>USE-PRO-208</span></div>
+  <aside class="notes"><p>رحّب بالمشاركين، واسأل كل واحد عن تخصصه وعن المهمة التي قاس خط أساسها في العمل التحضيري. من لم يُحضر خط أساس يختار اليوم مهمة من ملفات المقرر ويقيسها مساءً. إيقاع اليوم: جلستان، في كل منهما قسمان من المفاهيم ينتهي كل قسم بسؤال، ثم مختبر. الاستراحات بتقديرك.</p></aside>
+</section>
+
+<section class="slide" id="agenda" data-auto="agenda" data-label="جدول اليوم" data-n="2">
+  <div class="kicker">اليوم</div>
+  <h2>النزاهة وخريطة الأدبيات</h2>
+  <div class="agenda"><div class="item"><div><b>الجلسة 1 · ما يُقبل وما يُفصح عنه وما يُحظر</b><small>قواعد سوء السلوك البحثي حين يدخل الذكاء الاصطناعي، وقواعد الإفصاح، وسرية المخطوطات والمراجعات، وبيانات المشاركين والبيانات الحكومية وشروط الموافقة الأخلاقية</small></div></div><div class="item"><div><b>الجلسة 2 · خريطة الأدبيات: بحث موثّق وفرز يُقاس</b><small>استراتيجيات البحث في قواعد البيانات وسجل البحث، والتحقق من المراجع والأوراق المسحوبة، ثم مساعد الفرز: الاستدعاء على عينة فرزتها بيدك، وقواعد التوقف</small></div></div></div>
+</section>
+
+<section class="slide" id="what-to-open" data-label="قبل أن نبدأ" data-n="3">
+  <div class="kicker">قبل أن نبدأ</div>
+  <h2>ثلاثة أشياء مفتوحة أمامك طوال الورشة</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>1 · ملفات المختبرات</h4><p class="small mb0">من صفحة المقرر: مجلد <span class="ltr">files</span> بما فيه. برنامج جداول يفتح ملفات <span class="en">CSV</span> بالعربية.</p></div>
+    <div class="card c-cyan"><h4>2 · مساعد ذكاء اصطناعي</h4><p class="small mb0">مساعد عام مجاني مستضاف، أو ما اعتمدته جهتك. لا يُنزَّل أي نموذج على جهازك.</p></div>
+    <div class="card c-coral"><h4>3 · خط الأساس</h4><p class="small mb0">ورقة <span class="ltr">baseline_sheet.csv</span> من العمل التحضيري: دقائق مهمتك وأخطاؤها دون مساعد.</p></div>
+  </div>
+  <div class="callout warn mt"><b>ما لا يدخل القاعة.</b> لا مخطوطة غير منشورة، ولا بيانات مشاركين، ولا بيانات مقيّدة. كل مواد الورشة عامة أو اصطناعية.</div>
+  <aside class="notes"><p>دقيقتان. تأكد أن كل مشارك يفتح ملفًا واحدًا من المجلد في برنامج الجداول ويرى العربية سليمة. المختبر 2.2 غدًا يحتاج إلى خدمة دفاتر مستضافة مجانية أو <span class="en">JupyterLab</span>: اطلب ممن لا يملك أيًّا منهما أن يجرّب فتح الخدمة المستضافة اليوم.</p></aside>
+</section>
+
+<!-- الجلسة 1 -->
+
+<section class="slide section" id="s1" data-auto="section" data-session="1" data-n="4">
+  <div class="kicker">الجلسة 1</div>
+  <h1>ما يُقبل وما يُفصح عنه وما يُحظر</h1>
+  <ul class="bullets outcomes"><li>تطبّق قواعد الاختلاق والتزوير والانتحال على مخرجات الذكاء الاصطناعي، وتسمّي من يُسأل عنها</li><li>تفرّق بين استخدام مقبول واستخدام يُفصح عنه واستخدام محظور، وتذكر البند الذي يحكم كل حالة</li><li>تحكم في رفع مخطوطة قيد المراجعة أو بيانات مشاركين إلى مساعد قبل أن يحدث الرفع</li></ul>
+  <div class="sess-no">01</div>
+</section>
+
+<section class="slide" id="one-project-four-labs" data-lo="LO1 LO2 LO3 LO4 LO5" data-n="5" data-session="1">
+  <div class="kicker">مشروع واحد</div>
+  <h2>سؤال بحثي واحد يمر بأربع محطات، وفي كل محطة مساعد</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · ما يجوز</b>اثنا عشر استخدامًا وبطاقة سياسة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>2 · الأدبيات</b>200 سجل ومساعد يفرز</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>3 · الملخصات</b>عشر أوراق وعشرة ملخصات</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>4 · التحليل</b>خطة معلنة ودفتر يعاد تشغيله</div>
+  </div>
+  <div class="card tint c-navy mt"><h4>معهد هَجير لبحوث الصحة المهنية</h4><p class="small mb0">معهد افتراضي يعدّ مراجعة استكشافية (<span class="en">scoping review</span>) عن التعرض للحرارة لدى العاملين في الأماكن المكشوفة. أنت في دور الباحثة المشاركة بندري الميمني، ومساعد المعهد اسمه «مُعين».</p></div>
+  <aside class="notes"><p>قل إن المحطات الأربع هي نفسها في أي تخصص: ما يجوز، والأدبيات، والقراءة، والتحليل. موضوع الحرارة مثال يفهمه الجميع دون خلفية طبية. الأشخاص: د. بلقيس الطسان الباحثة الرئيسة، ود. حاتم المزيني الإحصائي، ومزنة النفيسة اختصاصية المعلومات، وقصي الغفيلي أمين لجنة الأخلاقيات، وعدي الشماسي المراجع الثاني في الفرز.</p></aside>
+</section>
+
+<section class="slide" id="baseline-you-brought" data-lo="LO5" data-n="6" data-session="1">
+  <div class="kicker">العمل التحضيري</div>
+  <h2>خط الأساس الذي أحضرته هو ما ستقيس عليه في آخر الورشة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>مهمة بحثية واحدة أدّيتها <b>دون مساعد</b>، بدقائقها.</li>
+      <li>أخطاؤها بأربعة أنواع: مرجع لم يُتحقق منه، ورقم بلا مصدر، وعبارة تخالف المصدر، وقرار بلا سبب.</li>
+      <li>في المشروع الختامي تعيد تصميمها بمساعد وتنفذها <b>مرتين</b>.</li>
+      <li>تكتب الأرقام كما هي، ولو لم تتحسن.</li>
+    </ul>
+    <div class="card c-teal"><h4>شرط النجاح في المقرر</h4><p class="small mb0">70% في المجموع، ولا مرجع لم يُتحقق منه، ولا رقم لا يُعرف مصدره. الشرط الثاني يُسقط العمل مهما كان مجموعه.</p></div>
+  </div>
+  <aside class="notes"><p>اسأل ثلاثة مشاركين عن مهمتهم ودقائقها. من اختار مهمة موادها غير منشورة يبدّلها الآن بمهمة من المنشور أو من ملفات المقرر. اشرح أن أنواع الأخطاء الأربعة هي نفسها ما تفحصه المختبرات الأربعة.</p></aside>
+</section>
+
+<section class="slide" id="what-you-already-know" data-lo="LO1" data-n="7" data-session="1">
+  <div class="kicker">تذكير بما سبق</div>
+  <h2>عادتان من مقرر العمل مع المساعدات تبقيان معك هنا</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>احكم</h4><p class="small mb0">المخرج المصقول يُفحص: وقائع مختلقة، وسياق ناقص، وموافقة على مقدمة خاطئة.</p></div>
+    <div class="card c-coral"><h4>تحمَّل</h4><p class="small mb0">سطر إفصاح يقول ما فعله المساعد، وما تحققت منه، ومن المسؤول.</p></div>
+  </div>
+  <div class="callout note mt"><b>ما يضيفه البحث العلمي.</b> القارئ يبني على ورقتك، والمحكّم يثق بما كتبت. لذلك للبحث قواعد سوء سلوك، وسياسات مجلات، ولجان أخلاقيات. هذه الجلسة عنها.</div>
+  <aside class="notes"><p>شريحة واحدة فقط: المقرر <span class="en">USE-FLU-201</span> متطلب سابق، ولا نعيد تدريسه. من لم يتذكر سطر الإفصاح فقالبه في مجلد الملفات.</p></aside>
+</section>
+
+<section class="slide" id="three-old-words" data-lo="LO1" data-n="8" data-session="1">
+  <div class="kicker">قواعد سوء السلوك البحثي</div>
+  <h2>ثلاث كلمات قديمة تنطبق كما هي حين تكتب الأداة</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>الاختلاق</h4><p class="small mb0">بيانات أو نتائج أو مراجع لا أصل لها. المساعد يكتبها بثقة حين لا يجد.</p></div>
+    <div class="card c-amber"><h4>التزوير</h4><p class="small mb0">تغيير بيانات أو صور أو حذف ما لا يعجب، فلا يعود السجل يصف ما جرى.</p></div>
+    <div class="card c-purple"><h4>الانتحال</h4><p class="small mb0">أفكار غيرك أو نصه دون نسبة. النص المولَّد قد يعيد صياغة مصدر لا تعرفه.</p></div>
+  </div>
+  <div class="callout warn mt"><b>الأداة لا تغيّر الحكم.</b> قيمة ناقصة ملأها المساعد «بقيمة معقولة» دون طريقة معلنة اختلاق، سواء كتبها إنسان أو نموذج.</div>
+  <aside class="notes"><p>اسأل: أي الثلاثة أسهل وقوعًا مع مساعد؟ الجواب المعتاد الاختلاق، في المراجع خاصة. نبّه إلى أن الخطأ غير المقصود ليس سوء سلوك، لكن إهمال التحقق مرة بعد مرة يقترب منه. الاستخدام U07 في المختبر مبني على هذه الشريحة.</p></aside>
+</section>
+
+<section class="slide" id="named-author-answers" data-lo="LO1" data-n="9" data-session="1">
+  <div class="kicker">من يُسأل</div>
+  <h2>المؤلف المسمّى يُسأل عن كل سطر، أيًّا كان من كتبه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الأداة <b>لا تُذكر مؤلفًا</b>: لا تتحمل مسؤولية الدقة ولا النزاهة ولا الأصالة.</li>
+      <li>البشر يراجعون ما كتبته الأداة: قد يكون خاطئًا أو ناقصًا أو منحازًا.</li>
+      <li>ما ولّدته الأداة <b>ليس مصدرًا أوليًّا</b> يُستشهد به.</li>
+      <li>إخفاء الاستخدام قد يُعامل معاملة سوء السلوك.</li>
+    </ul>
+    <div class="card c-teal"><h4>في معهد هَجير</h4><p class="small mb0">آخر سطر في بطاقة السياسة: «المؤلف المسمّى يُسأل عن كل ما في الورقة، أيًّا كانت الأداة التي كتبته».</p></div>
+  </div>
+  <aside class="notes"><p>النقاط الأربع من توصيات اللجنة الدولية لمحرري المجلات الطبية، وتأخذ بها مجلات كثيرة خارج الطب. قل إن السياسات تتغير: نذكر هنا ما كان منشورًا يوم إعداد المقرر، وعلى كل باحث أن يفتح صفحة مجلته يوم الإرسال.</p><p>المصادر: <span class="en">ICMJE Recommendations, AI Use by Authors</span>.</p></aside>
+</section>
+
+<section class="slide" id="check-who-answers" data-lo="LO1" data-n="10" data-session="1">
+  <div class="kicker">سؤال تحقق</div>
+  <h2>مرجع في المقدمة تبيّن أنه غير موجود</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-who-answers-q1">
+    <p class="lead">كتب باحث مساعد فقرة في المقدمة بمساعد ذكاء اصطناعي، وفيها مرجع اقترحه المساعد. بعد النشر تبيّن أن المرجع لا وجود له. الورقة عليها ثلاثة مؤلفين. من يُسأل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يحمّل الأداة مسؤولية لا تستطيع حملها: الأداة لا تُذكر مؤلفًا ولا تُحاسب" data-k="أ">الشركة التي تنتج المساعد</div>
+      <div class="opt" data-why="يحصر المسؤولية في من ضغط الزر: كل مؤلف مسمّى وافق على النسخة النهائية" data-k="ب">الباحث المساعد وحده، لأنه من استعمل الأداة</div>
+      <div class="opt" data-ok data-k="ج">المؤلفون الثلاثة، لأن أسماءهم على الورقة</div>
+      <div class="opt" data-why="يفترض أن التحكيم يتحقق من كل مرجع: المحكّم يقيّم العمل ولا يضمن مراجعه" data-k="د">المحكّمون، لأنهم أجازوا الورقة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المسؤولية على من سُمّي مؤلفًا. والمرجع الذي لم يفتحه أحد منهم محظور في بطاقة المعهد قبل أن يكون خطأ في الورقة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: المؤلفون الثلاثة. إن اختار كثيرون «الباحث المساعد وحده» فاسأل: من وقّع على النسخة النهائية؟ ثم اربط بالاستخدام U05 في المختبر.</p></aside>
+</section>
+
+<section class="slide" id="three-questions-three-classes" data-lo="LO1" data-n="11" data-session="1">
+  <div class="kicker">ثلاثة أسئلة</div>
+  <h2>كل استخدام يمر بثلاثة أسئلة، وأول «نعم» يحسمه</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>س1 · هل يغيّر ما تقوله الأدلة؟</h4><p class="small mb0">بيانات، أو نتائج، أو صور نتائج، أو مراجع.</p><p class="small mb0"><b>نعم: محظور.</b></p></div>
+    <div class="card c-amber"><h4>س2 · هل يدخل الأداةَ ما ليس لك أن تشاركه؟</h4><p class="small mb0">مخطوطة غيرك، أو بيانات مشاركين، أو بيانات مقيّدة.</p><p class="small mb0"><b>نعم: محظور</b>، إلا بإذن أو أداة معتمدة.</p></div>
+    <div class="card c-teal"><h4>س3 · هل يحتاج القارئ أن يعرفه؟</h4><p class="small mb0">أثّر في المحتوى أو في الطريقة.</p><p class="small mb0"><b>نعم: يُفصح عنه. لا: مقبول.</b></p></div>
+  </div>
+  <div class="callout warn mt"><b>الإفصاح لا يبيح محظورًا.</b> من رفع مخطوطة سرية ثم أفصح فقد أفصح عن مخالفة.</div>
+  <aside class="notes"><p>هذه أسئلة بطاقة المعهد التي يعمل عليها المختبر. الترتيب مقصود: السؤالان الأولان يحسمان قبل أن نصل إلى الإفصاح. الإفصاح لا يبيح محظورًا: من رفع مخطوطة سرية ثم أفصح فقد أفصح عن مخالفة.</p></aside>
+</section>
+
+<section class="slide" id="disclosure-says-three-things" data-lo="LO1 LO5" data-n="12" data-session="1">
+  <div class="kicker">قواعد الإفصاح</div>
+  <h2>الإفصاح يجيب عن ثلاثة أسئلة، والمجلة تحدد موضعه</h2>
+  <table class="t small">
+    <tr><th>السؤال</th><th>مثال من مشروع المعهد</th></tr>
+    <tr><td><b>ما الأداة؟</b></td><td>المساعد «مُعين»، مع إصداره أو تاريخ استخدامه</td></tr>
+    <tr><td><b>فيمَ استُخدمت؟</b></td><td>فرز عناوين 200 سجل وملخصاتها</td></tr>
+    <tr><td><b>كيف تحققت من مخرجها؟</b></td><td>قيس استدعاؤه على 50 سجلًا فُرزت باليد</td></tr>
+  </table>
+  <div class="cols cols-2 mt">
+    <div class="callout tip small"><b>الموضع.</b> قسم الأساليب، أو الشكر، أو تعليق الشكل، أو بيان مستقل قبل المراجع: كل مجلة تحدد.</div>
+    <div class="callout warn small"><b>ما لا يُفصح عنه يختلف.</b> التدقيق الإملائي معفى عند ناشرين، وغيرهم يطلب ذكر كل استخدام. الأشد يحكم.</div>
+  </div>
+  <aside class="notes"><p>الأسئلة الثلاثة هي ما تطلبه سياسة مجلة <span class="en">PLOS ONE</span>: أسماء الأدوات، وكيف استُخدمت وفي أي جزء، وكيف قُيّمت صحة مخرجاتها، في الأساليب أو الشكر أو تعليق الشكل. توصيات محرري المجلات الطبية تطلب ذكر الاستخدام في خطاب الإرسال وفي العمل نفسه. سياسة <span class="en">Elsevier</span> المحدَّثة في يونيو 2026 تطلب بيانًا مستقلًّا في آخر المخطوطة قبل المراجع، وتعفي مدققات الإملاء والنحو. هذه أمثلة تتغير: يفتح المشارك صفحة مجلته.</p><p>المصادر: <span class="en">PLOS ONE, Ethical Publishing Practice</span>؛ <span class="en">ICMJE Recommendations, AI Use by Authors</span>؛ <span class="en">Elsevier, Generative AI policies for journals</span>.</p></aside>
+</section>
+
+<section class="slide" id="manuscript-is-not-yours" data-lo="LO1" data-n="13" data-session="1">
+  <div class="kicker">المخطوطات والمراجعات السرية</div>
+  <h2>المخطوطة التي تحكّمها ليست لك حتى ترفعها إلى أداة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>المخطوطة قيد التحكيم <b>أمانة</b>: أفكار وبيانات لم تُنشر.</li>
+      <li>رفعها إلى أداة لا تضمن السرية <b>إفشاء</b>، ولو لم يقرأها أحد.</li>
+      <li>يتبع المحكّم سياسة المجلة، وإن سكتت <b>سأل قبل أن يستخدم</b>.</li>
+      <li>مقترحات المنح وتقارير التحكيم مثلها.</li>
+    </ul>
+    <div class="card c-coral"><h4>ما يبقى جائزًا</h4><p class="small mb0">أن تكتب رأيك بنفسك، وأن تسأل المحرر عن سياسة المجلة، وأن تطلب مهلة، وأن تعتذر عن التحكيم.</p></div>
+  </div>
+  <aside class="notes"><p>توصيات محرري المجلات الطبية: لا تُرفع المخطوطة إلى أداة لا تُضمن فيها السرية، ويلتزم المحكّم بسياسة المجلة، ويستأذن إن لم تذكر السياسة الاستخدام، ويفصح عن أي استخدام. سياستا <span class="en">PLOS ONE</span> و<span class="en">Elsevier</span> تمنعان رفع المخطوطة أو أي جزء منها. حالة المختبر مبنية على مجلة سكتت تعليماتها: السكوت لا يبيح.</p><p>المصادر: <span class="en">ICMJE Recommendations, AI Use by Reviewers</span>؛ <span class="en">PLOS ONE, Ethical Publishing Practice</span>؛ <span class="en">Elsevier, Generative AI policies for journals</span>.</p></aside>
+</section>
+
+<section class="slide" id="data-three-checks" data-lo="LO1" data-n="14" data-session="1">
+  <div class="kicker">البيانات والمشاركون</div>
+  <h2>قبل أن تدخل بياناتٌ أيَّ أداة: ثلاثة فحوص</h2>
+  <div class="cols cols-3">
+    <div class="card c-coral"><h4>هل تعرّف بشخص؟</h4><p class="small mb0">اسم، أو صوت، أو موقع عمل، أو صفات تجتمع فتدل على صاحبها. بيانات المشاركين الصحية حساسة.</p></div>
+    <div class="card c-amber"><h4>ما تصنيفها؟</h4><p class="small mb0">بيانات جهة حكومية مصنفة «مقيّد» فأعلى لا تدخل أداة عامة، ولو كانت بلا أسماء.</p></div>
+    <div class="card c-teal"><h4>هل الأداة معتمدة لهذا المشروع؟</h4><p class="small mb0">اعتماد الأداة في الجهة لا يكفي: المشروع نفسه يجب أن ينص عليها.</p></div>
+  </div>
+  <div class="callout note mt"><b>الاستخدام الثانوي.</b> بيانات جُمعت لغرض ثم تُستعمل في بحث: لها قواعدها، وتُسأل عنها الجهة صاحبة البيانات قبل أي تحليل.</div>
+  <aside class="notes"><p>لا نشرح هنا نصوص الأنظمة: نسمّيها ونحيل إليها. المراجع الوطنية لهذه الشريحة: نظام حماية البيانات الشخصية ولائحته التنفيذية، والقواعد العامة للاستخدام الثانوي للبيانات، وسياسة تصنيف البيانات. عناوينها الرسمية في مصادر المقرر. من عنده بيانات حقيقية يسأل مسؤول حماية البيانات في جهته، لا المدرّب.</p></aside>
+</section>
+
+<section class="slide" id="approval-covers-what-was-described" data-lo="LO1" data-n="15" data-session="1">
+  <div class="kicker">شروط الموافقة الأخلاقية</div>
+  <h2>الموافقة الأخلاقية تغطي ما وُصف فيها، لا ما أُضيف بعدها</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>البروتوكول يصف <b>من يعالج البيانات، وأين، وبأي أداة</b>.</li>
+      <li>إقرار المشارك يقول له ما سيُفعل بكلامه وصوته.</li>
+      <li>أداة ذكاء اصطناعي لم تُذكر: <b>تعديل يُعرض على اللجنة</b> قبل الاستخدام.</li>
+      <li>الأداة المعتمدة المذكورة في الموافقة: استخدام يُفصح عنه.</li>
+    </ul>
+    <div class="card c-purple"><h4>في معهد هَجير</h4><p class="small mb0">الأسئلة عن الأدوات تُرسل إلى أمين لجنة أخلاقيات البحث قصي الغفيلي «قبل الاستخدام لا بعده».</p></div>
+  </div>
+  <aside class="notes"><p>المرجع الوطني: نظام أخلاقيات البحث على المخلوقات الحية ولائحته التنفيذية، وعنوانا النظام واللجنة الوطنية للأخلاقيات الحيوية في مصادر المقرر. لا نذكر مواده هنا: يرجع المشارك إلى لجنة أخلاقيات البحث في منشأته. الاستخدامان U08 وU09 في المختبر مهمة واحدة، تفريغ مقابلات، والفرق بينهما كله في هذه الشريحة.</p></aside>
+</section>
+
+<section class="slide" id="same-task-two-rulings" data-lo="LO1" data-n="16" data-session="1">
+  <div class="kicker">مثال</div>
+  <h2>المهمة نفسها بحكمين: الفرق في الشروط لا في التقنية</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>ترجمة ملخص ورقتك</h4><p class="small mb0">نصك أنت، ولم يُنشر بعد لكنه لك. تراجع الترجمة على الأصل. <b>يُفصح عنه.</b></p></div>
+    <div class="card c-coral"><h4>ترجمة مخطوطة تحكّمها</h4><p class="small mb0">نص غيرك، وسري. لا يدخل أداة إلا بإذن مكتوب من المجلة. <b>محظور.</b></p></div>
+  </div>
+  <div class="callout tip mt"><b>اقرأ الاستخدام كله.</b> في المختبر كلمة واحدة تغيّر الحكم: «اعتمدها المعهد»، «دون ذكر ذلك»، «دون أن يفتحها».</div>
+  <aside class="notes"><p>اختر مثالًا آخر من تخصص القاعة إن شئت: تلخيص ورقة منشورة مقابل تلخيص مقترح منحة تحكّمه. لا تستعمل أمثلة المختبر نفسها هنا.</p></aside>
+</section>
+
+<section class="slide" id="check-reviewer-and-assistant" data-lo="LO1" data-n="17" data-session="1">
+  <div class="kicker">سؤال تحقق</div>
+  <h2>محكّم ضاق وقته</h2>
+  <div class="quiz" data-type="single" data-lo="LO1" data-id="check-reviewer-and-assistant-q1">
+    <p class="lead">تسلّمتَ مقترح منحة للتحكيم، وبقي يومان. تعليمات الجهة المانحة لا تذكر الذكاء الاصطناعي. ما التصرف الذي يتفق مع ما سبق؟</p>
+    <div class="opts">
+      <div class="opt" data-ok data-k="أ">تسأل الجهة المانحة كتابةً، ولا يدخل المقترح أي أداة قبل ردّها</div>
+      <div class="opt" data-why="يعدّ السكوت إذنًا: ما لم يُذكر في التعليمات يُسأل عنه، والسرية قائمة في كل حال" data-k="ب">ترفعه إلى المساعد، لأن التعليمات لم تمنع ذلك</div>
+      <div class="opt" data-why="يظن أن الإفصاح يبيح المحظور: الإفصاح بعد الرفع إفصاح عن إفشاء وقع" data-k="ج">ترفعه إلى المساعد، ثم تفصح عن ذلك في تقريرك</div>
+      <div class="opt" data-why="يظن أن حذف الأسماء يرفع السرية: الأفكار والبيانات غير المنشورة هي السر، لا أسماء أصحابها" data-k="د">تحذف أسماء الباحثين من المقترح ثم ترفعه</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> المقترح أمانة عندك. السؤال الثاني في البطاقة يحسم قبل أن نصل إلى الإفصاح.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: تسأل ولا ترفع. الخيار الرابع أكثر ما يُختار خطأ: اسأل «ما السر في المقترح؟ الأسماء أم الفكرة؟».</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-1" data-auto="lab" data-lab="1.1" data-label="المختبر 1.1" data-n="18" data-session="1">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.1 · 45 دقيقة</div><h2>تصنيف اثني عشر استخدامًا</h2><p class="lead small">تصنّف اثني عشر استخدامًا للذكاء الاصطناعي في البحث دون أي مساعد، وتخرج بجدول يذكر البند الحاكم لكل حالة</p><a class="nb" href="../labs/D1_1_classify_uses.html">D1_1_classify_uses.html</a></div><ul class="checklist"><li>اقرأ بطاقة سياسة المعهد وسمِّ أسئلتها الثلاثة <span class="min">6 د</span></li><li>صنّف الاستخدامات الاثني عشر بيدك: مقبول، أو يُفصح عنه، أو محظور <span class="min">16 د</span></li><li>اكتب لكل تصنيف البند الذي استندت إليه في البطاقة <span class="min">8 د</span></li><li>احكم في حالة المخطوطة قيد المراجعة واكتب الرد على المحرر <span class="min">6 د</span></li><li>صحّح جدولك بالمرجع وناقش ما اختلفتم فيه <span class="min">9 د</span></li><li class="stretch">✱ إضافي: اكتب لكل استخدام «يُفصح عنه» أين يوضع الإفصاح في الورقة وما الذي يذكره</li></ul></div>
+  <aside class="notes"><p><b>دون أي مساعد.</b> اطلب إغلاق نوافذ المساعدات. راقب الخطوة 2: من يصنّف بسرعة يقرأ نصف الاستخدام. المرجع: مقبول U01 وU10 وU12، ويُفصح عنه U02 وU04 وU06 وU09 وU11، ومحظور U03 وU05 وU07 وU08. النجاح مطابقة عشرة. أكثر الخلاف في U07 (قيم «معقولة» بلا طريقة معلنة: اختلاق) وU10 (أسئلة بلا بيانات ولا نص ينتقل: مقبول). حالة المخطوطة: محظور بالبند م3، والسكوت لا يبيح. اعرض الجدول المرجعي في الخطوة 5 لا قبلها.</p></aside>
+</section>
+
+<!-- الجلسة 2 -->
+
+<section class="slide section" id="s2" data-auto="section" data-session="2" data-n="19">
+  <div class="kicker">الجلسة 2</div>
+  <h1>خريطة الأدبيات: بحث موثّق وفرز يُقاس</h1>
+  <ul class="bullets outcomes"><li>تكتب سطرًا في سجل البحث يستطيع غيرك أن يعيد تنفيذه: القاعدة، والتاريخ، والاستعلام كما نُفّذ، والحدود، وعدد السجلات</li><li>تقيس استدعاء مساعد الفرز ودقته على عينة فرزتها بيدك قبل أن ترى قراراته</li><li>تفحص المراجع والأوراق المسحوبة، وتختار قاعدة توقف وتذكر ما قد يفوت بها</li></ul>
+  <div class="sess-no">02</div>
+</section>
+
+<section class="slide" id="question-into-blocks" data-lo="LO2" data-n="20" data-session="2">
+  <div class="kicker">استراتيجية البحث</div>
+  <h2>السؤال يُفكَّك إلى مجموعات، وكل مجموعة تُملأ بمرادفاتها</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>الفئة</h4><p class="small mb0">العاملون في الأماكن المكشوفة <b>أو</b> عمال البناء <b>أو</b> عمال الزراعة <b>أو</b> سائقو التوصيل <b>أو</b> عمال النظافة البلدية…</p></div>
+    <div class="card c-coral"><h4>المفهوم</h4><p class="small mb0">الإجهاد الحراري <b>أو</b> التعرض للحرارة <b>أو</b> ضربة الشمس <b>أو</b> الإنهاك الحراري <b>أو</b> أمراض الحرارة…</p></div>
+  </div>
+  <div class="callout tip mt"><b>«أو» داخل المجموعة، و«و» بين المجموعتين.</b> كل مرادف ناقص باب تخرج منه دراسات لا تعلم بها.</div>
+  <div class="callout warn mt-s"><b>أين يقع الخطأ.</b> الباحث يكتب المصطلح الذي يستعمله هو. الدراسات تسمّي المهنة باسمها، ولا تقول «العاملون في الأماكن المكشوفة».</div>
+  <aside class="notes"><p>المراجعة الاستكشافية ترسم خريطة ما دُرس، ولها إرشادات إبلاغ خاصة بها من عشرين بندًا أساسيًا وبندين اختياريين. المساعد مفيد هنا في اقتراح المرادفات، ولا يُسأل عن مراجع. اربط التحذير بما سيجده المشاركون في المختبر: المساعد يفوته ما يسمّي المهنة وحدها.</p><p>المصادر: <span class="en">PRISMA for Scoping Reviews (PRISMA-ScR)</span>.</p></aside>
+</section>
+
+<section class="slide" id="databases-differ" data-lo="LO2" data-n="21" data-session="2">
+  <div class="kicker">قواعد البيانات</div>
+  <h2>لا قاعدة واحدة ترى كل شيء: تبحث في أكثر من واحدة</h2>
+  <table class="t small">
+    <tr><th>القدرة</th><th>أمثلة قابلة للتبديل</th><th>ما تنتبه له</th></tr>
+    <tr><td>فهرس مفتوح واسع</td><td><span class="en">OpenAlex</span></td><td>استعمال أساسي مجاني دون حساب، وبياناته مفتوحة بلا قيود ترخيص</td></tr>
+    <tr><td>قاعدة تخصصية</td><td><span class="en">PubMed</span></td><td>تعرض كيف تُرجم استعلامك في تفاصيل البحث</td></tr>
+    <tr><td>بيانات وصفية ومعرّفات</td><td><span class="en">Crossref</span></td><td>للتحقق من وجود ورقة بمعرّفها، دون تسجيل</td></tr>
+  </table>
+  <div class="callout note mt"><b>الاستعلام يُعاد كتابته لكل قاعدة.</b> لكل قاعدة صياغتها وحقولها. «الاستعلام نفسه مع تعديلات بسيطة» لا يكفي في السجل.</div>
+  <aside class="notes"><p>الأدوات أمثلة لا توصيات، وأسماؤها وشروطها تتغير. في <span class="en">PubMed</span> تظهر تفاصيل البحث في صفحة البحث المتقدم ضمن السجل. في تخصصك قواعد أخرى: اسأل اختصاصي المعلومات في مكتبتك.</p><p>المصادر: <span class="en">OpenAlex, API overview</span>؛ <span class="en">PubMed User Guide</span>؛ <span class="en">Crossref, REST API</span>.</p></aside>
+</section>
+
+<section class="slide" id="log-row-someone-can-rerun" data-lo="LO2" data-n="22" data-session="2">
+  <div class="kicker">سجل البحث</div>
+  <h2>سطر السجل الجيد يستطيع غيرك أن يعيد تنفيذه</h2>
+  <table class="t small">
+    <tr><th>الحقل</th><th>سطر ناقص</th><th>سطر كامل</th></tr>
+    <tr><td>القاعدة والمنصة</td><td>«القاعدة الطبية»</td><td>اسم القاعدة، والمنصة التي بُحث منها</td></tr>
+    <tr><td>التاريخ</td><td>«الشهر الماضي»</td><td>تاريخ آخر تنفيذ</td></tr>
+    <tr><td>الاستعلام</td><td>«كما سبق»</td><td>منسوخ كما نُفّذ، حرفًا حرفًا</td></tr>
+    <tr><td>الحدود</td><td>لا تُذكر</td><td>السنوات واللغة والنوع، أو «لا حدود»</td></tr>
+    <tr><td>الأعداد</td><td>المجموع فقط</td><td>عدد كل قاعدة، وطريقة إزالة المكرر وأداتها</td></tr>
+  </table>
+  <aside class="notes"><p>الحقول من إرشادات الإبلاغ عن البحث في الأدبيات، وفيها ستة عشر بندًا: تسمية كل قاعدة ومنصتها، والاستراتيجية كاملة كما نُفّذت، وتاريخ آخر بحث، والحدود ومبررها، وعدد سجلات كل مصدر، وطريقة إزالة المكرر وأداتها. في المختبر سجل فيه ثلاثة نواقص من هذا الجدول.</p><p>المصادر: <span class="en">Rethlefsen et al., PRISMA-S (2021)</span>.</p></aside>
+</section>
+
+<section class="slide" id="references-invented" data-lo="LO2" data-n="23" data-session="2">
+  <div class="kicker">التحقق من المراجع</div>
+  <h2>المساعد يكتب مراجع لا وجود لها، بصيغة مراجع صحيحة</h2>
+  <div class="cols cols-2 mid">
+    <div class="stat center"><div class="big"><span class="ltr">55%</span></div><div class="lbl">من مراجع كتبها نموذج عام 2023 كانت مختلقة، و<span class="ltr">18%</span> في النموذج الأحدث منه</div></div>
+    <ul class="bullets">
+      <li>636 مرجعًا في 84 ورقة قصيرة طُلبت من النموذجين.</li>
+      <li>المراجع <b>الحقيقية</b> نفسها: في <span class="ltr">43%</span> و<span class="ltr">24%</span> منها أخطاء جوهرية.</li>
+      <li>النماذج تحسنت بعدها. الدرس باقٍ: <b>لا مرجع يدخل قائمتك قبل أن تفتحه</b>.</li>
+    </ul>
+  </div>
+  <aside class="notes"><p>الدراسة قارنت <span class="en">GPT-3.5</span> و<span class="en">GPT-4</span> عام 2023. لا تقل إن مساعدات اليوم بهذه النسب: قل إن أي نسبة فوق الصفر تعني أن كل مرجع يُفتح، وإن المساعد الموصول بالبحث يخطئ أيضًا في نسبة القول إلى المرجع. شرط النجاح في المقرر «لا مرجع لم يُتحقق منه».</p><p>المصادر: <span class="en">Walters and Wilder, Fabrication and errors in the bibliographic citations generated by ChatGPT (2023)</span>.</p></aside>
+</section>
+
+<section class="slide" id="three-tests-per-reference" data-lo="LO2" data-n="24" data-session="2">
+  <div class="kicker">ثلاثة اختبارات لكل مرجع</div>
+  <h2>موجود؟ يقول ما نُسب إليه؟ ما زال قائمًا؟</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>1 · الوجود</b>تفتحه بمعرّفه في فهرس أو عند الناشر</div>
+    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · المضمون</b>تقرأ الموضع الذي يُستشهد به، لا الملخص وحده</div>
+    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · الحالة</b>لم يُسحب، ولم يصدر عنه تصحيح يغيّر ما تستشهد به</div>
+  </div>
+  <div class="callout note mt frag"><b>الأوراق المسحوبة.</b> قاعدة بيانات الأوراق المسحوبة صارت متاحة للعموم منذ سبتمبر 2023، وتُحدَّث كل يوم عمل. برامج إدارة المراجع أمثلة على ما يفحصها لك.</div>
+  <aside class="notes"><p>اضغط مرة لكل اختبار. قاعدة <span class="en">Retraction Watch</span> استحوذت عليها <span class="en">Crossref</span> في سبتمبر 2023 وأتاحتها، وتظهر بياناتها في واجهتها البرمجية وفي ملف يُنزَّل. الورقة المسحوبة التي تستوفي معايير الإدراج لا تُحذف بصمت: تُسجَّل مسحوبة ويُذكر ذلك. في المختبر سجلان مسحوبان.</p><p>المصادر: <span class="en">Crossref, Retraction Watch data</span>.</p></aside>
+</section>
+
+<section class="slide" id="check-rerunnable-row" data-lo="LO2" data-n="25" data-session="2">
+  <div class="kicker">سؤال تحقق</div>
+  <h2>أي سطر يُعاد تنفيذه؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-rerunnable-row-q1">
+    <p class="lead">أربعة باحثين سجّلوا بحثهم في القاعدة نفسها. أي سطر يكفي ليعيد زميل البحث ويعرف أنه نفّذ البحث نفسه؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يكتفي بالكلمات المفتاحية: دون الروابط والحقول كما كُتبت لا يُعرف ما الذي نُفّذ" data-k="أ">الكلمات المفتاحية الخمس، والمنصة، والتاريخ، والحدود، وعدد النتائج</div>
+      <div class="opt" data-why="يثق بإحالة إلى سطر آخر: «كما سبق» ليس استعلامًا، وكل قاعدة لها صياغتها" data-k="ب">«كما في القاعدة السابقة»، والمنصة، والتاريخ، والحدود، وعدد النتائج</div>
+      <div class="opt" data-why="يستبدل السجل بوصف المساعد: ما قاله المساعد عن البحث ليس ما نفّذته القاعدة" data-k="ج">وصف المساعد للاستعلام، والمنصة، والتاريخ، والحدود، وعدد النتائج</div>
+      <div class="opt" data-ok data-k="د">الاستعلام كما نُفّذ حرفيًا، والمنصة، والتاريخ، والحدود، وعدد النتائج</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الحقول الأخرى في الأسطر الأربعة سواء. الفرق في الاستعلام: إعادة التنفيذ تحتاج إلى النص الذي قرأته القاعدة نفسه، لا كلماته ولا إحالة إليه ولا وصفًا له.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الأخير. نبّه إلى أن عدد النتائج سيختلف عند الإعادة لأن القاعدة تكبر: التاريخ يفسر الفرق.</p></aside>
+</section>
+
+<section class="slide" id="two-kinds-of-screeners" data-lo="LO2" data-n="26" data-session="2">
+  <div class="kicker">مساعد الفرز</div>
+  <h2>مساعدان مختلفان في الفرز، وكلاهما يُقاس قبل أن يُعتمد</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>أداة ترتّب وتتعلم منك</h4><p class="small mb0">تفرز أنت سجلات، فتتعلم الأداة وتقدّم لك الأرجح صلةً أولًا. مثال: <span class="en">ASReview LAB</span>، ونموذجها الافتراضي خفيف يعمل على حاسوب محمول.</p></div>
+    <div class="card c-coral"><h4>مساعد يحكم في كل سجل</h4><p class="small mb0">تعطيه المعايير والسجل فيكتب «يُدرج» أو «يُستبعد» وسببًا. «مُعين» في المختبر من هذا النوع.</p></div>
+  </div>
+  <div class="callout warn mt"><b>السبب المكتوب ليس دليلًا.</b> المساعد يكتب سببًا مقنعًا لقراره الخاطئ كما يكتبه للصحيح.</div>
+  <aside class="notes"><p>النموذج الافتراضي في <span class="en">ASReview LAB 2</span> يجمع <span class="en">TF-IDF</span> ومصنّف <span class="en">SVM</span>، ولا يحتاج إلى إضافات. لا نثبّته في القاعة: المختبر يقيس الاستدعاء، وهو المهارة التي تنتقل إلى أي أداة. من يريد التجربة في بيته فوثائق الأداة في المصادر.</p><p>المصادر: <span class="en">ASReview LAB, AI models</span>.</p></aside>
+</section>
+
+<section class="slide" id="recall-and-precision" data-lo="LO2" data-n="27" data-session="2">
+  <div class="kicker">رقمان</div>
+  <h2>الاستدعاء: كم وجد مما يستحق. الدقة: كم مما وجده يستحق</h2>
+  <div class="cols cols-2 mid">
+    <table class="t small">
+      <tr><th></th><th>المساعد أدرج</th><th>المساعد استبعد</th></tr>
+      <tr><td><b>يستحق الإدراج</b></td><td class="num">37</td><td class="num">9</td></tr>
+      <tr><td><b>لا يستحق</b></td><td class="num">14</td><td class="num">140</td></tr>
+    </table>
+    <div>
+      <div class="card c-teal"><h4>الاستدعاء</h4><p class="small mb0">37 من 46، أي <span class="ltr">80%</span>. تسع دراسات كانت ستضيع.</p></div>
+      <div class="card c-cyan mt-s"><h4>الدقة</h4><p class="small mb0">37 من 51، أي <span class="ltr">73%</span>. أربعة عشر سجلًا تُقرأ بلا فائدة.</p></div>
+    </div>
+  </div>
+  <div class="callout note mt"><b>الأرقام على السجلات المئتين كلها</b> بفرز المراجع الثاني. في المختبر تحسب الرقمين بنفسك على خمسين سجلًا فرزتها بيدك.</div>
+  <aside class="notes"><p>اشرح الجدول خلية خلية. الأرقام من الفرز المرجعي للسجلات المئتين، لا من العينة: لا تذكر أرقام العينة قبل المختبر، فالمشارك يحسبها على فرزه هو.</p></aside>
+</section>
+
+<section class="slide" id="recall-first" data-lo="LO2" data-n="28" data-session="2">
+  <div class="kicker">أي الرقمين أهم</div>
+  <h2>في الفرز، ما يُستبعد خطأً لا يعود</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>استدعاء منخفض</h4><p class="small mb0">دراسات تستحق الإدراج لا يراها أحد بعد اليوم. المراجعة ناقصة ولا تعلم أنها ناقصة.</p></div>
+    <div class="card c-teal"><h4>دقة منخفضة</h4><p class="small mb0">سجلات زائدة تُقرأ نصوصها ثم تُستبعد. تكلفتها وقت، لا خطأ في النتيجة.</p></div>
+  </div>
+  <ul class="bullets mt">
+    <li>لذلك <b>يميل الفرز الأول إلى الإدراج</b> عند الشك.</li>
+    <li>ولذلك يُقاس المساعد على فرز بشري <b>أُجري قبل رؤية قراراته</b>.</li>
+  </ul>
+  <aside class="notes"><p>اسأل: ماذا يقيس الرقم إن رأيت قرارات المساعد أولًا؟ يقيس اتفاقك معه بعد أن تأثرت به. هذا سبب التحذير في الخطوة 3 من المختبر. والاستدعاء المقيس على خمسين سجلًا تقدير تقريبي: الدراسات ذات الصلة فيها قليلة العدد، فاذكر العدد مع النسبة دائمًا.</p></aside>
+</section>
+
+<section class="slide" id="stopping-needs-more-than-one-rule" data-lo="LO2" data-n="29" data-session="2">
+  <div class="kicker">قواعد التوقف</div>
+  <h2>متى تتوقف عن الفرز؟ شرط واحد لا يكفي</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>1 · الأوراق المعروفة وُجدت</h4><p class="small mb0">أوراق تعرفها قبل البحث: إن لم تظهر فالفرز لم ينتهِ.</p></div>
+    <div class="card c-cyan"><h4>2 · فُرز ما يكفي</h4><p class="small mb0">مثلًا: ضعف العدد المتوقع من الدراسات ذات الصلة.</p></div>
+    <div class="card c-purple"><h4>3 · حد أدنى من السجلات</h4><p class="small mb0">مثلًا: عُشر السجلات على الأقل.</p></div>
+    <div class="card c-coral"><h4>4 · سلسلة بلا جديد</h4><p class="small mb0">مثلًا: خمسون سجلًا متتاليًا بلا دراسة ذات صلة.</p></div>
+  </div>
+  <div class="callout tip small mt"><b>الأربعة معًا، وتُعلن قبل الفرز.</b> الأرقام أمثلة يختارها الفريق لمراجعته ويكتبها في الأساليب.</div>
+  <aside class="notes"><p>الشروط الأربعة من إجراء منشور للتوقف في الفرز بالتعلم النشط، وهو أربع مراحل: عينة عشوائية للتدريب، ثم تعلم نشط يتوقف بهذه الشروط الأربعة، ثم نموذج آخر، ثم فحص جودة لما استُبعد. أصحابه يقولون إن الأرقام أمثلة. ورقتا المعهد المعروفتان قبل البحث R007 وR019. نتيجة قاعدة الخمسين وحدها على سجلات المعهد في خلاصة اليوم.</p><p>المصادر: <span class="en">Boetje and van de Schoot, The SAFE procedure (2024)</span>.</p></aside>
+</section>
+
+<section class="slide" id="ai-use-log-starts-now" data-lo="LO2 LO5" data-n="30" data-session="2">
+  <div class="kicker">سجل الاستخدام</div>
+  <h2>من هذا المختبر: كل استخدام للمساعد يُكتب يوم وقوعه</h2>
+  <table class="t small">
+    <tr><th>الأداة</th><th>الغرض</th><th>ما دخل الأداة</th><th>كيف تحققت</th><th>يُفصح عنه؟</th></tr>
+    <tr><td>مساعد عام</td><td>مرادفات للاستعلام</td><td>مصطلحان</td><td>جرّبت كل مرادف في القاعدة</td><td>نعم</td></tr>
+    <tr><td>«مُعين»</td><td>فرز 200 سجل</td><td>عناوين وملخصات منشورة</td><td>استدعاء على 50 فُرزت باليد</td><td>نعم</td></tr>
+  </table>
+  <div class="callout tip mt"><b>الإفصاح يُكتب من السجل، لا من الذاكرة.</b> بيان الإفصاح في المشروع الختامي يُنسخ من هذه الأسطر.</div>
+  <aside class="notes"><p>الملف <span class="ltr">ai_use_log.csv</span> في مجلد الملفات. سياسة الذكاء الاصطناعي في المقرر: دون مساعد في المختبر 1.1 وفي الفحص الفردي، والمساعد معلّم يسأل في خطة التحليل، ومسموح كاملًا في ما عدا ذلك مع تسجيل كل استخدام.</p></aside>
+</section>
+
+<section class="slide" id="check-which-number" data-lo="LO2" data-n="31" data-session="2">
+  <div class="kicker">سؤال تحقق</div>
+  <h2>مساعدان للفرز، وعليك أن تختار</h2>
+  <div class="quiz" data-type="single" data-lo="LO2" data-id="check-which-number-q1">
+    <p class="lead">على عينة فيها 20 دراسة تستحق الإدراج: المساعد الأول أدرج 30 سجلًا، منها 19 تستحق. المساعد الثاني أدرج 16 سجلًا، كلها تستحق. أيهما تعتمد للفرز الأول في مراجعة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يقدّم الدقة على الاستدعاء: الثاني لم يخطئ في ما أدرجه، لكنه أضاع أربع دراسات من عشرين" data-k="أ">الثاني، لأنه لم يدرج أي سجل خطأ</div>
+      <div class="opt" data-ok data-k="ب">الأول، لأنه أضاع دراسة واحدة من عشرين</div>
+      <div class="opt" data-why="يحسب أن قلة ما يُقرأ هي الهدف: الفرز الأول غايته ألا تضيع دراسة، والوقت يأتي بعدها" data-k="ج">الثاني، لأن ما يُقرأ بعده أقل</div>
+      <div class="opt" data-why="يظن أن الرقمين يتعادلان: استدعاء 95% مقابل 80% فرق في ما يضيع، لا يعوّضه فرق الدقة" data-k="د">أيهما، فالفرق بينهما يتعادل</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> استدعاء الأول 19 من 20، واستدعاء الثاني 16 من 20. الأحد عشر سجلًا الزائدة تُقرأ ثم تُستبعد، والدراسات الأربع الضائعة لا تعود.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: الأول. دع القاعة تحسب الأرقام الأربعة: استدعاء 95% و80%، ودقة 63% و100%.</p></aside>
+</section>
+
+<section class="slide lab top" id="lab-1-2" data-auto="lab" data-lab="1.2" data-label="المختبر 1.2" data-n="32" data-session="2">
+  <div class="cols cols-2 mid"><div><div class="lab-tag">المختبر 1.2 · 55 دقيقة</div><h2>استدعاء المساعد على خمسين سجلًا</h2><p class="lead small">توثّق بحثًا واحدًا وتفرز خمسين سجلًا بيدك، وتخرج بسجل بحث وبقياس لاستدعاء المساعد «مُعين» على فرزك</p><a class="nb" href="../labs/D1_2_screening_recall.html">D1_2_screening_recall.html</a></div><ul class="checklist"><li>اقرأ السؤال ومعايير الأهلية، وسمِّ ثلاثة نواقص في سجل البحث المسجَّل <span class="min">8 د</span></li><li>نفّذ بحثًا واحدًا في قاعدة مفتوحة وسجّله سطرًا كاملًا <span class="min">10 د</span></li><li>افرز خمسين سجلًا بيدك قبل أن ترى قرارات المساعد <span class="min">18 د</span></li><li>قارن فرزك بقرارات «مُعين» واحسب الاستدعاء والدقة <span class="min">8 د</span></li><li>سمِّ نمط ما فات المساعد، وافحص قائمة الأوراق المسحوبة <span class="min">6 د</span></li><li>قرّر: هل يُعتمد المساعد لبقية السجلات، وبأي قاعدة توقف؟ <span class="min">5 د</span></li><li class="stretch">✱ إضافي: رتّب السجلات المئتين بدرجة المساعد واحسب أين توقفك قاعدة «خمسون سجلًا متتاليًا بلا دراسة ذات صلة» وكم دراسة تفوتك</li></ul></div>
+  <aside class="notes"><p><b>مسموح بالمساعد، وكل استخدام يُسجَّل.</b> الفرز في الخطوة 3 باليد، وملف المساعد لا يُفتح قبل الخطوة 4. المرجع على العينة: 14 تستحق الإدراج، والمساعد أدرج 15، والمشترك 11. ما فاته: R075 وR144 وR171. النواقص الثلاثة في السجل: استعلام «كما في القاعدة أ»، وسطر بلا تاريخ، وإزالة مكرر بلا طريقة. الورقة المسحوبة في العينة R049. إن حُجبت القاعدة المفتوحة في الخطوة 2 فاعرض تنفيذًا واحدًا على الشاشة ودع المشاركين يملؤون السطر. قرارات «مُعين» كتبها مؤلف المقرر: لم يفرز السجلات نموذج.</p></aside>
+</section>
+
+<section class="slide" id="wrap-up" data-lo="LO1 LO2" data-n="33" data-session="2">
+  <div class="kicker">خلاصة اليوم 1</div>
+  <h2>ثلاثة أمور تبقى معك</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>الحكم قبل الأداة</h4><p class="small mb0">ثلاثة أسئلة بالترتيب: الأدلة، ثم ما ليس لك أن تشاركه، ثم ما يحتاج القارئ أن يعرفه.</p></div>
+    <div class="card c-coral"><h4>المساعد يُقاس</h4><p class="small mb0">في المئتين كلها وجد «مُعين» 37 دراسة من 46. خمس من التسع الضائعة تسمّي مهنة باسمها، وثلاث بلا ملخص.</p></div>
+    <div class="card c-purple"><h4>قاعدة واحدة لا تكفي</h4><p class="small mb0">قاعدة «خمسون بلا جديد» وحدها توقف بعد 137 سجلًا وتضيّع 4 دراسات من 46.</p></div>
+  </div>
+  <aside class="notes"><p>الأرقام من التشغيل المرجعي للمختبر 1.2 على السجلات المئتين. اسأل: ما الذي يجمع بين نمط ما فات المساعد وبين استعلام القاعدة أ في السجل؟ كلاهما يعتمد على العبارة العامة ويغفل أسماء المهن.</p></aside>
+</section>
+
+<section class="slide dark" id="next" data-label="التالي" data-n="34" data-session="2">
+  <div class="kicker">التالي</div>
+  <h2>اليوم 2: الملخصات والتحليل</h2>
+  <p class="lead">غدًا تدقّق عشرة ملخصات على أوراقها، ثم تعيد تشغيل دفتر تحليل. جرّب الليلة أن تفتح خدمة دفاتر مستضافة مجانية أو <span class="en">JupyterLab</span>، واحتفظ بسجل استخدام الذكاء الاصطناعي: يكمل غدًا.</p>
+  <aside class="notes"><p>من لم ينهِ المختبر 1.2 يكمله في بيته: مختبرات الغد لا تعتمد عليه. من لم يحضر خط أساس يقيس الليلة مهمة من ملفات المقرر: تلخيص الورقة <span class="ltr">P09</span> في مئة كلمة دون مساعد، مثلًا.</p></aside>
+</section>
+</div>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T19:31:13Z","version":"2027.1.0","commit":"151eafb"},"course":{"id":"use-pro-208","code":"USE-PRO-208","title":"الذكاء الاصطناعي للباحثين والعمل العلمي","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-208/","repo":"SDAIAAcademy/use-pro-208","home":"../index.html"},"deck":{"id":"day1","kind":"day","day":1,"label":"اليوم 1","title":"النزاهة وخريطة الأدبيات","prev":null,"next":"day2.html","md":"day1.md","alt":{}},"sessions":[{"n":1,"label":"الجلسة 1","title":"ما يُقبل وما يُفصح عنه وما يُحظر","slide":"s1","outcomes":["تطبّق قواعد الاختلاق والتزوير والانتحال على مخرجات الذكاء الاصطناعي، وتسمّي من يُسأل عنها","تفرّق بين استخدام مقبول واستخدام يُفصح عنه واستخدام محظور، وتذكر البند الذي يحكم كل حالة","تحكم في رفع مخطوطة قيد المراجعة أو بيانات مشاركين إلى مساعد قبل أن يحدث الرفع"],"minutes":105,"lab":{"id":"1.1","title":"تصنيف اثني عشر استخدامًا","minutes":45,"href":"../labs/D1_1_classify_uses.html"}},{"n":2,"label":"الجلسة 2","title":"خريطة الأدبيات: بحث موثّق وفرز يُقاس","slide":"s2","outcomes":["تكتب سطرًا في سجل البحث يستطيع غيرك أن يعيد تنفيذه: القاعدة، والتاريخ، والاستعلام كما نُفّذ، والحدود، وعدد السجلات","تقيس استدعاء مساعد الفرز ودقته على عينة فرزتها بيدك قبل أن ترى قراراته","تفحص المراجع والأوراق المسحوبة، وتختار قاعدة توقف وتذكر ما قد يفوت بها"],"minutes":105,"lab":{"id":"1.2","title":"استدعاء المساعد على خمسين سجلًا","minutes":55,"href":"../labs/D1_2_screening_recall.html"}}],"slides":[{"id":"title","n":1,"title":"النزاهة وخريطة الأدبيات","kind":"title","session":0,"hash":"0f52bb20","md":"#### [day1#title] النزاهة وخريطة الأدبيات\n\n*أكاديمية سدايا · الذكاء الاصطناعي للباحثين والعمل العلمي*\n\nاليوم 1: تحكم في اثني عشر استخدامًا للذكاء الاصطناعي ببطاقة سياسة المعهد، ثم توثّق بحثًا وتقيس استدعاء مساعد الفرز على خمسين سجلًا فرزتها بيدك\n\nمسار الطلاقة في البيانات والذكاء الاصطناعي · يومان تدريبيان + يوم للمشروع الختامي · جلستان · مختبران · USE-PRO-208","notes":"رحّب بالمشاركين، واسأل كل واحد عن تخصصه وعن المهمة التي قاس خط أساسها في العمل التحضيري. من لم يُحضر خط أساس يختار اليوم مهمة من ملفات المقرر ويقيسها مساءً. إيقاع اليوم: جلستان، في كل منهما قسمان من المفاهيم ينتهي كل قسم بسؤال، ثم مختبر. الاستراحات بتقديرك.","minutes":null,"lo":[]},{"id":"agenda","n":2,"title":"النزاهة وخريطة الأدبيات","kind":"content","session":0,"hash":"e4a8f3c4","md":"#### [day1#agenda] النزاهة وخريطة الأدبيات\n\n*اليوم*\n\n- **الجلسة 1 · ما يُقبل وما يُفصح عنه وما يُحظر**: قواعد سوء السلوك البحثي حين يدخل الذكاء الاصطناعي، وقواعد الإفصاح، وسرية المخطوطات والمراجعات، وبيانات المشاركين والبيانات الحكومية وشروط الموافقة الأخلاقية\n- **الجلسة 2 · خريطة الأدبيات: بحث موثّق وفرز يُقاس**: استراتيجيات البحث في قواعد البيانات وسجل البحث، والتحقق من المراجع والأوراق المسحوبة، ثم مساعد الفرز: الاستدعاء على عينة فرزتها بيدك، وقواعد التوقف","notes":"","minutes":null,"lo":[]},{"id":"what-to-open","n":3,"title":"ثلاثة أشياء مفتوحة أمامك طوال الورشة","kind":"content","session":0,"hash":"cebb1cb6","md":"#### [day1#what-to-open] ثلاثة أشياء مفتوحة أمامك طوال الورشة\n\n*قبل أن نبدأ*\n\n- **1 · ملفات المختبرات.** من صفحة المقرر: مجلد files بما فيه. برنامج جداول يفتح ملفات CSV بالعربية.\n- **2 · مساعد ذكاء اصطناعي.** مساعد عام مجاني مستضاف، أو ما اعتمدته جهتك. لا يُنزَّل أي نموذج على جهازك.\n- **3 · خط الأساس.** ورقة baseline_sheet.csv من العمل التحضيري: دقائق مهمتك وأخطاؤها دون مساعد.\n\n> **ما لا يدخل القاعة.** لا مخطوطة غير منشورة، ولا بيانات مشاركين، ولا بيانات مقيّدة. كل مواد الورشة عامة أو اصطناعية.","notes":"دقيقتان. تأكد أن كل مشارك يفتح ملفًا واحدًا من المجلد في برنامج الجداول ويرى العربية سليمة. المختبر 2.2 غدًا يحتاج إلى خدمة دفاتر مستضافة مجانية أو JupyterLab: اطلب ممن لا يملك أيًّا منهما أن يجرّب فتح الخدمة المستضافة اليوم.","minutes":null,"lo":[]},{"id":"s1","n":4,"title":"ما يُقبل وما يُفصح عنه وما يُحظر","kind":"section","session":1,"hash":"2b54ebcd","md":"#### [day1#s1] ما يُقبل وما يُفصح عنه وما يُحظر\n\n*الجلسة 1*\n\n- تطبّق قواعد الاختلاق والتزوير والانتحال على مخرجات الذكاء الاصطناعي، وتسمّي من يُسأل عنها\n- تفرّق بين استخدام مقبول واستخدام يُفصح عنه واستخدام محظور، وتذكر البند الذي يحكم كل حالة\n- تحكم في رفع مخطوطة قيد المراجعة أو بيانات مشاركين إلى مساعد قبل أن يحدث الرفع","notes":"","minutes":null,"lo":["LO1"]},{"id":"one-project-four-labs","n":5,"title":"سؤال بحثي واحد يمر بأربع محطات، وفي كل محطة مساعد","kind":"content","session":1,"hash":"438f036b","md":"#### [day1#one-project-four-labs] سؤال بحثي واحد يمر بأربع محطات، وفي كل محطة مساعد\n\n*مشروع واحد*\n\n1. **1 · ما يجوز** اثنا عشر استخدامًا وبطاقة سياسة\n2. **2 · الأدبيات** 200 سجل ومساعد يفرز\n3. **3 · الملخصات** عشر أوراق وعشرة ملخصات\n4. **4 · التحليل** خطة معلنة ودفتر يعاد تشغيله\n\n- **معهد هَجير لبحوث الصحة المهنية.** معهد افتراضي يعدّ مراجعة استكشافية (scoping review) عن التعرض للحرارة لدى العاملين في الأماكن المكشوفة. أنت في دور الباحثة المشاركة بندري الميمني، ومساعد المعهد اسمه «مُعين».","notes":"قل إن المحطات الأربع هي نفسها في أي تخصص: ما يجوز، والأدبيات، والقراءة، والتحليل. موضوع الحرارة مثال يفهمه الجميع دون خلفية طبية. الأشخاص: د. بلقيس الطسان الباحثة الرئيسة، ود. حاتم المزيني الإحصائي، ومزنة النفيسة اختصاصية المعلومات، وقصي الغفيلي أمين لجنة الأخلاقيات، وعدي الشماسي المراجع الثاني في الفرز.","minutes":null,"lo":["LO1","LO2","LO3","LO4","LO5"]},{"id":"baseline-you-brought","n":6,"title":"خط الأساس الذي أحضرته هو ما ستقيس عليه في آخر الورشة","kind":"content","session":1,"hash":"ecb29146","md":"#### [day1#baseline-you-brought] خط الأساس الذي أحضرته هو ما ستقيس عليه في آخر الورشة\n\n*العمل التحضيري*\n\n- مهمة بحثية واحدة أدّيتها **دون مساعد**، بدقائقها.\n- أخطاؤها بأربعة أنواع: مرجع لم يُتحقق منه، ورقم بلا مصدر، وعبارة تخالف المصدر، وقرار بلا سبب.\n- في المشروع الختامي تعيد تصميمها بمساعد وتنفذها **مرتين**.\n- تكتب الأرقام كما هي، ولو لم تتحسن.\n\n- **شرط النجاح في المقرر.** 70% في المجموع، ولا مرجع لم يُتحقق منه، ولا رقم لا يُعرف مصدره. الشرط الثاني يُسقط العمل مهما كان مجموعه.","notes":"اسأل ثلاثة مشاركين عن مهمتهم ودقائقها. من اختار مهمة موادها غير منشورة يبدّلها الآن بمهمة من المنشور أو من ملفات المقرر. اشرح أن أنواع الأخطاء الأربعة هي نفسها ما تفحصه المختبرات الأربعة.","minutes":null,"lo":["LO5"]},{"id":"what-you-already-know","n":7,"title":"عادتان من مقرر العمل مع المساعدات تبقيان معك هنا","kind":"content","session":1,"hash":"06ecae89","md":"#### [day1#what-you-already-know] عادتان من مقرر العمل مع المساعدات تبقيان معك هنا\n\n*تذكير بما سبق*\n\n- **احكم.** المخرج المصقول يُفحص: وقائع مختلقة، وسياق ناقص، وموافقة على مقدمة خاطئة.\n- **تحمَّل.** سطر إفصاح يقول ما فعله المساعد، وما تحققت منه، ومن المسؤول.\n\n> **ما يضيفه البحث العلمي.** القارئ يبني على ورقتك، والمحكّم يثق بما كتبت. لذلك للبحث قواعد سوء سلوك، وسياسات مجلات، ولجان أخلاقيات. هذه الجلسة عنها.","notes":"شريحة واحدة فقط: المقرر USE-FLU-201 متطلب سابق، ولا نعيد تدريسه. من لم يتذكر سطر الإفصاح فقالبه في مجلد الملفات.","minutes":null,"lo":["LO1"]},{"id":"three-old-words","n":8,"title":"ثلاث كلمات قديمة تنطبق كما هي حين تكتب الأداة","kind":"content","session":1,"hash":"40621f9f","md":"#### [day1#three-old-words] ثلاث كلمات قديمة تنطبق كما هي حين تكتب الأداة\n\n*قواعد سوء السلوك البحثي*\n\n- **الاختلاق.** بيانات أو نتائج أو مراجع لا أصل لها. المساعد يكتبها بثقة حين لا يجد.\n- **التزوير.** تغيير بيانات أو صور أو حذف ما لا يعجب، فلا يعود السجل يصف ما جرى.\n- **الانتحال.** أفكار غيرك أو نصه دون نسبة. النص المولَّد قد يعيد صياغة مصدر لا تعرفه.\n\n> **الأداة لا تغيّر الحكم.** قيمة ناقصة ملأها المساعد «بقيمة معقولة» دون طريقة معلنة اختلاق، سواء كتبها إنسان أو نموذج.","notes":"اسأل: أي الثلاثة أسهل وقوعًا مع مساعد؟ الجواب المعتاد الاختلاق، في المراجع خاصة. نبّه إلى أن الخطأ غير المقصود ليس سوء سلوك، لكن إهمال التحقق مرة بعد مرة يقترب منه. الاستخدام U07 في المختبر مبني على هذه الشريحة.","minutes":null,"lo":["LO1"]},{"id":"named-author-answers","n":9,"title":"المؤلف المسمّى يُسأل عن كل سطر، أيًّا كان من كتبه","kind":"content","session":1,"hash":"4e1303ee","md":"#### [day1#named-author-answers] المؤلف المسمّى يُسأل عن كل سطر، أيًّا كان من كتبه\n\n*من يُسأل*\n\n- الأداة **لا تُذكر مؤلفًا**: لا تتحمل مسؤولية الدقة ولا النزاهة ولا الأصالة.\n- البشر يراجعون ما كتبته الأداة: قد يكون خاطئًا أو ناقصًا أو منحازًا.\n- ما ولّدته الأداة **ليس مصدرًا أوليًّا** يُستشهد به.\n- إخفاء الاستخدام قد يُعامل معاملة سوء السلوك.\n\n- **في معهد هَجير.** آخر سطر في بطاقة السياسة: «المؤلف المسمّى يُسأل عن كل ما في الورقة، أيًّا كانت الأداة التي كتبته».","notes":"النقاط الأربع من توصيات اللجنة الدولية لمحرري المجلات الطبية، وتأخذ بها مجلات كثيرة خارج الطب. قل إن السياسات تتغير: نذكر هنا ما كان منشورًا يوم إعداد المقرر، وعلى كل باحث أن يفتح صفحة مجلته يوم الإرسال.\n\nالمصادر: ICMJE Recommendations, AI Use by Authors.","minutes":null,"lo":["LO1"]},{"id":"check-who-answers","n":10,"title":"مرجع في المقدمة تبيّن أنه غير موجود","kind":"quiz","session":1,"hash":"b6c411bd","md":"#### [day1#check-who-answers] مرجع في المقدمة تبيّن أنه غير موجود\n\n*سؤال تحقق*\n\n**سؤال:** كتب باحث مساعد فقرة في المقدمة بمساعد ذكاء اصطناعي، وفيها مرجع اقترحه المساعد. بعد النشر تبيّن أن المرجع لا وجود له. الورقة عليها ثلاثة مؤلفين. من يُسأل؟\n\n- أ. الشركة التي تنتج المساعد\n- ب. الباحث المساعد وحده، لأنه من استعمل الأداة\n- ج. المؤلفون الثلاثة، لأن أسماءهم على الورقة\n- د. المحكّمون، لأنهم أجازوا الورقة","notes":"الإجابة: المؤلفون الثلاثة. إن اختار كثيرون «الباحث المساعد وحده» فاسأل: من وقّع على النسخة النهائية؟ ثم اربط بالاستخدام U05 في المختبر.","minutes":null,"lo":["LO1"]},{"id":"three-questions-three-classes","n":11,"title":"كل استخدام يمر بثلاثة أسئلة، وأول «نعم» يحسمه","kind":"content","session":1,"hash":"dcb7d74a","md":"#### [day1#three-questions-three-classes] كل استخدام يمر بثلاثة أسئلة، وأول «نعم» يحسمه\n\n*ثلاثة أسئلة*\n\n- **س1 · هل يغيّر ما تقوله الأدلة؟** بيانات، أو نتائج، أو صور نتائج، أو مراجع. **نعم: محظور.**\n- **س2 · هل يدخل الأداةَ ما ليس لك أن تشاركه؟** مخطوطة غيرك، أو بيانات مشاركين، أو بيانات مقيّدة. **نعم: محظور**، إلا بإذن أو أداة معتمدة.\n- **س3 · هل يحتاج القارئ أن يعرفه؟** أثّر في المحتوى أو في الطريقة. **نعم: يُفصح عنه. لا: مقبول.**\n\n> **الإفصاح لا يبيح محظورًا.** من رفع مخطوطة سرية ثم أفصح فقد أفصح عن مخالفة.","notes":"هذه أسئلة بطاقة المعهد التي يعمل عليها المختبر. الترتيب مقصود: السؤالان الأولان يحسمان قبل أن نصل إلى الإفصاح. الإفصاح لا يبيح محظورًا: من رفع مخطوطة سرية ثم أفصح فقد أفصح عن مخالفة.","minutes":null,"lo":["LO1"]},{"id":"disclosure-says-three-things","n":12,"title":"الإفصاح يجيب عن ثلاثة أسئلة، والمجلة تحدد موضعه","kind":"content","session":1,"hash":"646e9d85","md":"#### [day1#disclosure-says-three-things] الإفصاح يجيب عن ثلاثة أسئلة، والمجلة تحدد موضعه\n\n*قواعد الإفصاح*\n\n| السؤال | مثال من مشروع المعهد |\n| --- | --- |\n| **ما الأداة؟** | المساعد «مُعين»، مع إصداره أو تاريخ استخدامه |\n| **فيمَ استُخدمت؟** | فرز عناوين 200 سجل وملخصاتها |\n| **كيف تحققت من مخرجها؟** | قيس استدعاؤه على 50 سجلًا فُرزت باليد |\n\n> **الموضع.** قسم الأساليب، أو الشكر، أو تعليق الشكل، أو بيان مستقل قبل المراجع: كل مجلة تحدد.\n\n> **ما لا يُفصح عنه يختلف.** التدقيق الإملائي معفى عند ناشرين، وغيرهم يطلب ذكر كل استخدام. الأشد يحكم.","notes":"الأسئلة الثلاثة هي ما تطلبه سياسة مجلة PLOS ONE: أسماء الأدوات، وكيف استُخدمت وفي أي جزء، وكيف قُيّمت صحة مخرجاتها، في الأساليب أو الشكر أو تعليق الشكل. توصيات محرري المجلات الطبية تطلب ذكر الاستخدام في خطاب الإرسال وفي العمل نفسه. سياسة Elsevier المحدَّثة في يونيو 2026 تطلب بيانًا مستقلًّا في آخر المخطوطة قبل المراجع، وتعفي مدققات الإملاء والنحو. هذه أمثلة تتغير: يفتح المشارك صفحة مجلته.\n\nالمصادر: PLOS ONE, Ethical Publishing Practice؛ ICMJE Recommendations, AI Use by Authors؛ Elsevier, Generative AI policies for journals.","minutes":null,"lo":["LO1","LO5"]},{"id":"manuscript-is-not-yours","n":13,"title":"المخطوطة التي تحكّمها ليست لك حتى ترفعها إلى أداة","kind":"content","session":1,"hash":"cbbc5d16","md":"#### [day1#manuscript-is-not-yours] المخطوطة التي تحكّمها ليست لك حتى ترفعها إلى أداة\n\n*المخطوطات والمراجعات السرية*\n\n- المخطوطة قيد التحكيم **أمانة**: أفكار وبيانات لم تُنشر.\n- رفعها إلى أداة لا تضمن السرية **إفشاء**، ولو لم يقرأها أحد.\n- يتبع المحكّم سياسة المجلة، وإن سكتت **سأل قبل أن يستخدم**.\n- مقترحات المنح وتقارير التحكيم مثلها.\n\n- **ما يبقى جائزًا.** أن تكتب رأيك بنفسك، وأن تسأل المحرر عن سياسة المجلة، وأن تطلب مهلة، وأن تعتذر عن التحكيم.","notes":"توصيات محرري المجلات الطبية: لا تُرفع المخطوطة إلى أداة لا تُضمن فيها السرية، ويلتزم المحكّم بسياسة المجلة، ويستأذن إن لم تذكر السياسة الاستخدام، ويفصح عن أي استخدام. سياستا PLOS ONE وElsevier تمنعان رفع المخطوطة أو أي جزء منها. حالة المختبر مبنية على مجلة سكتت تعليماتها: السكوت لا يبيح.\n\nالمصادر: ICMJE Recommendations, AI Use by Reviewers؛ PLOS ONE, Ethical Publishing Practice؛ Elsevier, Generative AI policies for journals.","minutes":null,"lo":["LO1"]},{"id":"data-three-checks","n":14,"title":"قبل أن تدخل بياناتٌ أيَّ أداة: ثلاثة فحوص","kind":"content","session":1,"hash":"20963526","md":"#### [day1#data-three-checks] قبل أن تدخل بياناتٌ أيَّ أداة: ثلاثة فحوص\n\n*البيانات والمشاركون*\n\n- **هل تعرّف بشخص؟** اسم، أو صوت، أو موقع عمل، أو صفات تجتمع فتدل على صاحبها. بيانات المشاركين الصحية حساسة.\n- **ما تصنيفها؟** بيانات جهة حكومية مصنفة «مقيّد» فأعلى لا تدخل أداة عامة، ولو كانت بلا أسماء.\n- **هل الأداة معتمدة لهذا المشروع؟** اعتماد الأداة في الجهة لا يكفي: المشروع نفسه يجب أن ينص عليها.\n\n> **الاستخدام الثانوي.** بيانات جُمعت لغرض ثم تُستعمل في بحث: لها قواعدها، وتُسأل عنها الجهة صاحبة البيانات قبل أي تحليل.","notes":"لا نشرح هنا نصوص الأنظمة: نسمّيها ونحيل إليها. المراجع الوطنية لهذه الشريحة: نظام حماية البيانات الشخصية ولائحته التنفيذية، والقواعد العامة للاستخدام الثانوي للبيانات، وسياسة تصنيف البيانات. عناوينها الرسمية في مصادر المقرر. من عنده بيانات حقيقية يسأل مسؤول حماية البيانات في جهته، لا المدرّب.","minutes":null,"lo":["LO1"]},{"id":"approval-covers-what-was-described","n":15,"title":"الموافقة الأخلاقية تغطي ما وُصف فيها، لا ما أُضيف بعدها","kind":"content","session":1,"hash":"e99ff6e4","md":"#### [day1#approval-covers-what-was-described] الموافقة الأخلاقية تغطي ما وُصف فيها، لا ما أُضيف بعدها\n\n*شروط الموافقة الأخلاقية*\n\n- البروتوكول يصف **من يعالج البيانات، وأين، وبأي أداة**.\n- إقرار المشارك يقول له ما سيُفعل بكلامه وصوته.\n- أداة ذكاء اصطناعي لم تُذكر: **تعديل يُعرض على اللجنة** قبل الاستخدام.\n- الأداة المعتمدة المذكورة في الموافقة: استخدام يُفصح عنه.\n\n- **في معهد هَجير.** الأسئلة عن الأدوات تُرسل إلى أمين لجنة أخلاقيات البحث قصي الغفيلي «قبل الاستخدام لا بعده».","notes":"المرجع الوطني: نظام أخلاقيات البحث على المخلوقات الحية ولائحته التنفيذية، وعنوانا النظام واللجنة الوطنية للأخلاقيات الحيوية في مصادر المقرر. لا نذكر مواده هنا: يرجع المشارك إلى لجنة أخلاقيات البحث في منشأته. الاستخدامان U08 وU09 في المختبر مهمة واحدة، تفريغ مقابلات، والفرق بينهما كله في هذه الشريحة.","minutes":null,"lo":["LO1"]},{"id":"same-task-two-rulings","n":16,"title":"المهمة نفسها بحكمين: الفرق في الشروط لا في التقنية","kind":"content","session":1,"hash":"6433056a","md":"#### [day1#same-task-two-rulings] المهمة نفسها بحكمين: الفرق في الشروط لا في التقنية\n\n*مثال*\n\n- **ترجمة ملخص ورقتك.** نصك أنت، ولم يُنشر بعد لكنه لك. تراجع الترجمة على الأصل. **يُفصح عنه.**\n- **ترجمة مخطوطة تحكّمها.** نص غيرك، وسري. لا يدخل أداة إلا بإذن مكتوب من المجلة. **محظور.**\n\n> **اقرأ الاستخدام كله.** في المختبر كلمة واحدة تغيّر الحكم: «اعتمدها المعهد»، «دون ذكر ذلك»، «دون أن يفتحها».","notes":"اختر مثالًا آخر من تخصص القاعة إن شئت: تلخيص ورقة منشورة مقابل تلخيص مقترح منحة تحكّمه. لا تستعمل أمثلة المختبر نفسها هنا.","minutes":null,"lo":["LO1"]},{"id":"check-reviewer-and-assistant","n":17,"title":"محكّم ضاق وقته","kind":"quiz","session":1,"hash":"6aad9c0f","md":"#### [day1#check-reviewer-and-assistant] محكّم ضاق وقته\n\n*سؤال تحقق*\n\n**سؤال:** تسلّمتَ مقترح منحة للتحكيم، وبقي يومان. تعليمات الجهة المانحة لا تذكر الذكاء الاصطناعي. ما التصرف الذي يتفق مع ما سبق؟\n\n- أ. تسأل الجهة المانحة كتابةً، ولا يدخل المقترح أي أداة قبل ردّها\n- ب. ترفعه إلى المساعد، لأن التعليمات لم تمنع ذلك\n- ج. ترفعه إلى المساعد، ثم تفصح عن ذلك في تقريرك\n- د. تحذف أسماء الباحثين من المقترح ثم ترفعه","notes":"الإجابة: تسأل ولا ترفع. الخيار الرابع أكثر ما يُختار خطأ: اسأل «ما السر في المقترح؟ الأسماء أم الفكرة؟».","minutes":null,"lo":["LO1"]},{"id":"lab-1-1","n":18,"title":"تصنيف اثني عشر استخدامًا","kind":"lab","session":1,"hash":"bbf2244f","md":"#### [day1#lab-1-1] تصنيف اثني عشر استخدامًا\n\nالمختبر 1.1 · 45 دقيقة\n\nتصنّف اثني عشر استخدامًا للذكاء الاصطناعي في البحث دون أي مساعد، وتخرج بجدول يذكر البند الحاكم لكل حالة\n\n[D1_1_classify_uses.html](https://sdaiaacademy.github.io/use-pro-208/labs/D1_1_classify_uses.html)\n\n- [ ] اقرأ بطاقة سياسة المعهد وسمِّ أسئلتها الثلاثة (6 د)\n- [ ] صنّف الاستخدامات الاثني عشر بيدك: مقبول، أو يُفصح عنه، أو محظور (16 د)\n- [ ] اكتب لكل تصنيف البند الذي استندت إليه في البطاقة (8 د)\n- [ ] احكم في حالة المخطوطة قيد المراجعة واكتب الرد على المحرر (6 د)\n- [ ] صحّح جدولك بالمرجع وناقش ما اختلفتم فيه (9 د)\n- [ ] ✱ إضافي: اكتب لكل استخدام «يُفصح عنه» أين يوضع الإفصاح في الورقة وما الذي يذكره","notes":"**دون أي مساعد.** اطلب إغلاق نوافذ المساعدات. راقب الخطوة 2: من يصنّف بسرعة يقرأ نصف الاستخدام. المرجع: مقبول U01 وU10 وU12، ويُفصح عنه U02 وU04 وU06 وU09 وU11، ومحظور U03 وU05 وU07 وU08. النجاح مطابقة عشرة. أكثر الخلاف في U07 (قيم «معقولة» بلا طريقة معلنة: اختلاق) وU10 (أسئلة بلا بيانات ولا نص ينتقل: مقبول). حالة المخطوطة: محظور بالبند م3، والسكوت لا يبيح. اعرض الجدول المرجعي في الخطوة 5 لا قبلها.","minutes":null,"lo":[]},{"id":"s2","n":19,"title":"خريطة الأدبيات: بحث موثّق وفرز يُقاس","kind":"section","session":2,"hash":"5ade0313","md":"#### [day1#s2] خريطة الأدبيات: بحث موثّق وفرز يُقاس\n\n*الجلسة 2*\n\n- تكتب سطرًا في سجل البحث يستطيع غيرك أن يعيد تنفيذه: القاعدة، والتاريخ، والاستعلام كما نُفّذ، والحدود، وعدد السجلات\n- تقيس استدعاء مساعد الفرز ودقته على عينة فرزتها بيدك قبل أن ترى قراراته\n- تفحص المراجع والأوراق المسحوبة، وتختار قاعدة توقف وتذكر ما قد يفوت بها","notes":"","minutes":null,"lo":["LO2"]},{"id":"question-into-blocks","n":20,"title":"السؤال يُفكَّك إلى مجموعات، وكل مجموعة تُملأ بمرادفاتها","kind":"content","session":2,"hash":"455148dc","md":"#### [day1#question-into-blocks] السؤال يُفكَّك إلى مجموعات، وكل مجموعة تُملأ بمرادفاتها\n\n*استراتيجية البحث*\n\n- **الفئة.** العاملون في الأماكن المكشوفة **أو** عمال البناء **أو** عمال الزراعة **أو** سائقو التوصيل **أو** عمال النظافة البلدية…\n- **المفهوم.** الإجهاد الحراري **أو** التعرض للحرارة **أو** ضربة الشمس **أو** الإنهاك الحراري **أو** أمراض الحرارة…\n\n> **«أو» داخل المجموعة، و«و» بين المجموعتين.** كل مرادف ناقص باب تخرج منه دراسات لا تعلم بها.\n\n> **أين يقع الخطأ.** الباحث يكتب المصطلح الذي يستعمله هو. الدراسات تسمّي المهنة باسمها، ولا تقول «العاملون في الأماكن المكشوفة».","notes":"المراجعة الاستكشافية ترسم خريطة ما دُرس، ولها إرشادات إبلاغ خاصة بها من عشرين بندًا أساسيًا وبندين اختياريين. المساعد مفيد هنا في اقتراح المرادفات، ولا يُسأل عن مراجع. اربط التحذير بما سيجده المشاركون في المختبر: المساعد يفوته ما يسمّي المهنة وحدها.\n\nالمصادر: PRISMA for Scoping Reviews (PRISMA-ScR).","minutes":null,"lo":["LO2"]},{"id":"databases-differ","n":21,"title":"لا قاعدة واحدة ترى كل شيء: تبحث في أكثر من واحدة","kind":"content","session":2,"hash":"5b84ee36","md":"#### [day1#databases-differ] لا قاعدة واحدة ترى كل شيء: تبحث في أكثر من واحدة\n\n*قواعد البيانات*\n\n| القدرة | أمثلة قابلة للتبديل | ما تنتبه له |\n| --- | --- | --- |\n| فهرس مفتوح واسع | OpenAlex | استعمال أساسي مجاني دون حساب، وبياناته مفتوحة بلا قيود ترخيص |\n| قاعدة تخصصية | PubMed | تعرض كيف تُرجم استعلامك في تفاصيل البحث |\n| بيانات وصفية ومعرّفات | Crossref | للتحقق من وجود ورقة بمعرّفها، دون تسجيل |\n\n> **الاستعلام يُعاد كتابته لكل قاعدة.** لكل قاعدة صياغتها وحقولها. «الاستعلام نفسه مع تعديلات بسيطة» لا يكفي في السجل.","notes":"الأدوات أمثلة لا توصيات، وأسماؤها وشروطها تتغير. في PubMed تظهر تفاصيل البحث في صفحة البحث المتقدم ضمن السجل. في تخصصك قواعد أخرى: اسأل اختصاصي المعلومات في مكتبتك.\n\nالمصادر: OpenAlex, API overview؛ PubMed User Guide؛ Crossref, REST API.","minutes":null,"lo":["LO2"]},{"id":"log-row-someone-can-rerun","n":22,"title":"سطر السجل الجيد يستطيع غيرك أن يعيد تنفيذه","kind":"content","session":2,"hash":"8d28b0d8","md":"#### [day1#log-row-someone-can-rerun] سطر السجل الجيد يستطيع غيرك أن يعيد تنفيذه\n\n*سجل البحث*\n\n| الحقل | سطر ناقص | سطر كامل |\n| --- | --- | --- |\n| القاعدة والمنصة | «القاعدة الطبية» | اسم القاعدة، والمنصة التي بُحث منها |\n| التاريخ | «الشهر الماضي» | تاريخ آخر تنفيذ |\n| الاستعلام | «كما سبق» | منسوخ كما نُفّذ، حرفًا حرفًا |\n| الحدود | لا تُذكر | السنوات واللغة والنوع، أو «لا حدود» |\n| الأعداد | المجموع فقط | عدد كل قاعدة، وطريقة إزالة المكرر وأداتها |","notes":"الحقول من إرشادات الإبلاغ عن البحث في الأدبيات، وفيها ستة عشر بندًا: تسمية كل قاعدة ومنصتها، والاستراتيجية كاملة كما نُفّذت، وتاريخ آخر بحث، والحدود ومبررها، وعدد سجلات كل مصدر، وطريقة إزالة المكرر وأداتها. في المختبر سجل فيه ثلاثة نواقص من هذا الجدول.\n\nالمصادر: Rethlefsen et al., PRISMA-S (2021).","minutes":null,"lo":["LO2"]},{"id":"references-invented","n":23,"title":"المساعد يكتب مراجع لا وجود لها، بصيغة مراجع صحيحة","kind":"content","session":2,"hash":"d4ed40a8","md":"#### [day1#references-invented] المساعد يكتب مراجع لا وجود لها، بصيغة مراجع صحيحة\n\n*التحقق من المراجع*\n\n**55%** من مراجع كتبها نموذج عام 2023 كانت مختلقة، و18% في النموذج الأحدث منه\n\n- 636 مرجعًا في 84 ورقة قصيرة طُلبت من النموذجين.\n- المراجع **الحقيقية** نفسها: في 43% و24% منها أخطاء جوهرية.\n- النماذج تحسنت بعدها. الدرس باقٍ: **لا مرجع يدخل قائمتك قبل أن تفتحه**.","notes":"الدراسة قارنت GPT-3.5 وGPT-4 عام 2023. لا تقل إن مساعدات اليوم بهذه النسب: قل إن أي نسبة فوق الصفر تعني أن كل مرجع يُفتح، وإن المساعد الموصول بالبحث يخطئ أيضًا في نسبة القول إلى المرجع. شرط النجاح في المقرر «لا مرجع لم يُتحقق منه».\n\nالمصادر: Walters and Wilder, Fabrication and errors in the bibliographic citations generated by ChatGPT (2023).","minutes":null,"lo":["LO2"]},{"id":"three-tests-per-reference","n":24,"title":"موجود؟ يقول ما نُسب إليه؟ ما زال قائمًا؟","kind":"content","session":2,"hash":"b32fa5c5","md":"#### [day1#three-tests-per-reference] موجود؟ يقول ما نُسب إليه؟ ما زال قائمًا؟\n\n*ثلاثة اختبارات لكل مرجع*\n\n1. **1 · الوجود** تفتحه بمعرّفه في فهرس أو عند الناشر\n2. **2 · المضمون** تقرأ الموضع الذي يُستشهد به، لا الملخص وحده\n3. **3 · الحالة** لم يُسحب، ولم يصدر عنه تصحيح يغيّر ما تستشهد به\n\n> **الأوراق المسحوبة.** قاعدة بيانات الأوراق المسحوبة صارت متاحة للعموم منذ سبتمبر 2023، وتُحدَّث كل يوم عمل. برامج إدارة المراجع أمثلة على ما يفحصها لك.","notes":"اضغط مرة لكل اختبار. قاعدة Retraction Watch استحوذت عليها Crossref في سبتمبر 2023 وأتاحتها، وتظهر بياناتها في واجهتها البرمجية وفي ملف يُنزَّل. الورقة المسحوبة التي تستوفي معايير الإدراج لا تُحذف بصمت: تُسجَّل مسحوبة ويُذكر ذلك. في المختبر سجلان مسحوبان.\n\nالمصادر: Crossref, Retraction Watch data.","minutes":null,"lo":["LO2"]},{"id":"check-rerunnable-row","n":25,"title":"أي سطر يُعاد تنفيذه؟","kind":"quiz","session":2,"hash":"dade9637","md":"#### [day1#check-rerunnable-row] أي سطر يُعاد تنفيذه؟\n\n*سؤال تحقق*\n\n**سؤال:** أربعة باحثين سجّلوا بحثهم في القاعدة نفسها. أي سطر يكفي ليعيد زميل البحث ويعرف أنه نفّذ البحث نفسه؟\n\n- أ. الكلمات المفتاحية الخمس، والمنصة، والتاريخ، والحدود، وعدد النتائج\n- ب. «كما في القاعدة السابقة»، والمنصة، والتاريخ، والحدود، وعدد النتائج\n- ج. وصف المساعد للاستعلام، والمنصة، والتاريخ، والحدود، وعدد النتائج\n- د. الاستعلام كما نُفّذ حرفيًا، والمنصة، والتاريخ، والحدود، وعدد النتائج","notes":"الإجابة: الأخير. نبّه إلى أن عدد النتائج سيختلف عند الإعادة لأن القاعدة تكبر: التاريخ يفسر الفرق.","minutes":null,"lo":["LO2"]},{"id":"two-kinds-of-screeners","n":26,"title":"مساعدان مختلفان في الفرز، وكلاهما يُقاس قبل أن يُعتمد","kind":"content","session":2,"hash":"a4210d7a","md":"#### [day1#two-kinds-of-screeners] مساعدان مختلفان في الفرز، وكلاهما يُقاس قبل أن يُعتمد\n\n*مساعد الفرز*\n\n- **أداة ترتّب وتتعلم منك.** تفرز أنت سجلات، فتتعلم الأداة وتقدّم لك الأرجح صلةً أولًا. مثال: ASReview LAB، ونموذجها الافتراضي خفيف يعمل على حاسوب محمول.\n- **مساعد يحكم في كل سجل.** تعطيه المعايير والسجل فيكتب «يُدرج» أو «يُستبعد» وسببًا. «مُعين» في المختبر من هذا النوع.\n\n> **السبب المكتوب ليس دليلًا.** المساعد يكتب سببًا مقنعًا لقراره الخاطئ كما يكتبه للصحيح.","notes":"النموذج الافتراضي في ASReview LAB 2 يجمع TF-IDF ومصنّف SVM، ولا يحتاج إلى إضافات. لا نثبّته في القاعة: المختبر يقيس الاستدعاء، وهو المهارة التي تنتقل إلى أي أداة. من يريد التجربة في بيته فوثائق الأداة في المصادر.\n\nالمصادر: ASReview LAB, AI models.","minutes":null,"lo":["LO2"]},{"id":"recall-and-precision","n":27,"title":"الاستدعاء: كم وجد مما يستحق. الدقة: كم مما وجده يستحق","kind":"content","session":2,"hash":"f9a1428d","md":"#### [day1#recall-and-precision] الاستدعاء: كم وجد مما يستحق. الدقة: كم مما وجده يستحق\n\n*رقمان*\n\n|  | المساعد أدرج | المساعد استبعد |\n| --- | --- | --- |\n| **يستحق الإدراج** | 37 | 9 |\n| **لا يستحق** | 14 | 140 |\n\n- **الاستدعاء.** 37 من 46، أي 80%. تسع دراسات كانت ستضيع.\n- **الدقة.** 37 من 51، أي 73%. أربعة عشر سجلًا تُقرأ بلا فائدة.\n\n> **الأرقام على السجلات المئتين كلها** بفرز المراجع الثاني. في المختبر تحسب الرقمين بنفسك على خمسين سجلًا فرزتها بيدك.","notes":"اشرح الجدول خلية خلية. الأرقام من الفرز المرجعي للسجلات المئتين، لا من العينة: لا تذكر أرقام العينة قبل المختبر، فالمشارك يحسبها على فرزه هو.","minutes":null,"lo":["LO2"]},{"id":"recall-first","n":28,"title":"في الفرز، ما يُستبعد خطأً لا يعود","kind":"content","session":2,"hash":"29d936da","md":"#### [day1#recall-first] في الفرز، ما يُستبعد خطأً لا يعود\n\n*أي الرقمين أهم*\n\n- **استدعاء منخفض.** دراسات تستحق الإدراج لا يراها أحد بعد اليوم. المراجعة ناقصة ولا تعلم أنها ناقصة.\n- **دقة منخفضة.** سجلات زائدة تُقرأ نصوصها ثم تُستبعد. تكلفتها وقت، لا خطأ في النتيجة.\n\n- لذلك **يميل الفرز الأول إلى الإدراج** عند الشك.\n- ولذلك يُقاس المساعد على فرز بشري **أُجري قبل رؤية قراراته**.","notes":"اسأل: ماذا يقيس الرقم إن رأيت قرارات المساعد أولًا؟ يقيس اتفاقك معه بعد أن تأثرت به. هذا سبب التحذير في الخطوة 3 من المختبر. والاستدعاء المقيس على خمسين سجلًا تقدير تقريبي: الدراسات ذات الصلة فيها قليلة العدد، فاذكر العدد مع النسبة دائمًا.","minutes":null,"lo":["LO2"]},{"id":"stopping-needs-more-than-one-rule","n":29,"title":"متى تتوقف عن الفرز؟ شرط واحد لا يكفي","kind":"content","session":2,"hash":"b1bf5f06","md":"#### [day1#stopping-needs-more-than-one-rule] متى تتوقف عن الفرز؟ شرط واحد لا يكفي\n\n*قواعد التوقف*\n\n- **1 · الأوراق المعروفة وُجدت.** أوراق تعرفها قبل البحث: إن لم تظهر فالفرز لم ينتهِ.\n- **2 · فُرز ما يكفي.** مثلًا: ضعف العدد المتوقع من الدراسات ذات الصلة.\n- **3 · حد أدنى من السجلات.** مثلًا: عُشر السجلات على الأقل.\n- **4 · سلسلة بلا جديد.** مثلًا: خمسون سجلًا متتاليًا بلا دراسة ذات صلة.\n\n> **الأربعة معًا، وتُعلن قبل الفرز.** الأرقام أمثلة يختارها الفريق لمراجعته ويكتبها في الأساليب.","notes":"الشروط الأربعة من إجراء منشور للتوقف في الفرز بالتعلم النشط، وهو أربع مراحل: عينة عشوائية للتدريب، ثم تعلم نشط يتوقف بهذه الشروط الأربعة، ثم نموذج آخر، ثم فحص جودة لما استُبعد. أصحابه يقولون إن الأرقام أمثلة. ورقتا المعهد المعروفتان قبل البحث R007 وR019. نتيجة قاعدة الخمسين وحدها على سجلات المعهد في خلاصة اليوم.\n\nالمصادر: Boetje and van de Schoot, The SAFE procedure (2024).","minutes":null,"lo":["LO2"]},{"id":"ai-use-log-starts-now","n":30,"title":"من هذا المختبر: كل استخدام للمساعد يُكتب يوم وقوعه","kind":"content","session":2,"hash":"228a719c","md":"#### [day1#ai-use-log-starts-now] من هذا المختبر: كل استخدام للمساعد يُكتب يوم وقوعه\n\n*سجل الاستخدام*\n\n| الأداة | الغرض | ما دخل الأداة | كيف تحققت | يُفصح عنه؟ |\n| --- | --- | --- | --- | --- |\n| مساعد عام | مرادفات للاستعلام | مصطلحان | جرّبت كل مرادف في القاعدة | نعم |\n| «مُعين» | فرز 200 سجل | عناوين وملخصات منشورة | استدعاء على 50 فُرزت باليد | نعم |\n\n> **الإفصاح يُكتب من السجل، لا من الذاكرة.** بيان الإفصاح في المشروع الختامي يُنسخ من هذه الأسطر.","notes":"الملف ai_use_log.csv في مجلد الملفات. سياسة الذكاء الاصطناعي في المقرر: دون مساعد في المختبر 1.1 وفي الفحص الفردي، والمساعد معلّم يسأل في خطة التحليل، ومسموح كاملًا في ما عدا ذلك مع تسجيل كل استخدام.","minutes":null,"lo":["LO2","LO5"]},{"id":"check-which-number","n":31,"title":"مساعدان للفرز، وعليك أن تختار","kind":"quiz","session":2,"hash":"79986deb","md":"#### [day1#check-which-number] مساعدان للفرز، وعليك أن تختار\n\n*سؤال تحقق*\n\n**سؤال:** على عينة فيها 20 دراسة تستحق الإدراج: المساعد الأول أدرج 30 سجلًا، منها 19 تستحق. المساعد الثاني أدرج 16 سجلًا، كلها تستحق. أيهما تعتمد للفرز الأول في مراجعة؟\n\n- أ. الثاني، لأنه لم يدرج أي سجل خطأ\n- ب. الأول، لأنه أضاع دراسة واحدة من عشرين\n- ج. الثاني، لأن ما يُقرأ بعده أقل\n- د. أيهما، فالفرق بينهما يتعادل","notes":"الإجابة: الأول. دع القاعة تحسب الأرقام الأربعة: استدعاء 95% و80%، ودقة 63% و100%.","minutes":null,"lo":["LO2"]},{"id":"lab-1-2","n":32,"title":"استدعاء المساعد على خمسين سجلًا","kind":"lab","session":2,"hash":"521b3bc0","md":"#### [day1#lab-1-2] استدعاء المساعد على خمسين سجلًا\n\nالمختبر 1.2 · 55 دقيقة\n\nتوثّق بحثًا واحدًا وتفرز خمسين سجلًا بيدك، وتخرج بسجل بحث وبقياس لاستدعاء المساعد «مُعين» على فرزك\n\n[D1_2_screening_recall.html](https://sdaiaacademy.github.io/use-pro-208/labs/D1_2_screening_recall.html)\n\n- [ ] اقرأ السؤال ومعايير الأهلية، وسمِّ ثلاثة نواقص في سجل البحث المسجَّل (8 د)\n- [ ] نفّذ بحثًا واحدًا في قاعدة مفتوحة وسجّله سطرًا كاملًا (10 د)\n- [ ] افرز خمسين سجلًا بيدك قبل أن ترى قرارات المساعد (18 د)\n- [ ] قارن فرزك بقرارات «مُعين» واحسب الاستدعاء والدقة (8 د)\n- [ ] سمِّ نمط ما فات المساعد، وافحص قائمة الأوراق المسحوبة (6 د)\n- [ ] قرّر: هل يُعتمد المساعد لبقية السجلات، وبأي قاعدة توقف؟ (5 د)\n- [ ] ✱ إضافي: رتّب السجلات المئتين بدرجة المساعد واحسب أين توقفك قاعدة «خمسون سجلًا متتاليًا بلا دراسة ذات صلة» وكم دراسة تفوتك","notes":"**مسموح بالمساعد، وكل استخدام يُسجَّل.** الفرز في الخطوة 3 باليد، وملف المساعد لا يُفتح قبل الخطوة 4. المرجع على العينة: 14 تستحق الإدراج، والمساعد أدرج 15، والمشترك 11. ما فاته: R075 وR144 وR171. النواقص الثلاثة في السجل: استعلام «كما في القاعدة أ»، وسطر بلا تاريخ، وإزالة مكرر بلا طريقة. الورقة المسحوبة في العينة R049. إن حُجبت القاعدة المفتوحة في الخطوة 2 فاعرض تنفيذًا واحدًا على الشاشة ودع المشاركين يملؤون السطر. قرارات «مُعين» كتبها مؤلف المقرر: لم يفرز السجلات نموذج.","minutes":null,"lo":[]},{"id":"wrap-up","n":33,"title":"ثلاثة أمور تبقى معك","kind":"content","session":2,"hash":"a418cddc","md":"#### [day1#wrap-up] ثلاثة أمور تبقى معك\n\n*خلاصة اليوم 1*\n\n- **الحكم قبل الأداة.** ثلاثة أسئلة بالترتيب: الأدلة، ثم ما ليس لك أن تشاركه، ثم ما يحتاج القارئ أن يعرفه.\n- **المساعد يُقاس.** في المئتين كلها وجد «مُعين» 37 دراسة من 46. خمس من التسع الضائعة تسمّي مهنة باسمها، وثلاث بلا ملخص.\n- **قاعدة واحدة لا تكفي.** قاعدة «خمسون بلا جديد» وحدها توقف بعد 137 سجلًا وتضيّع 4 دراسات من 46.","notes":"الأرقام من التشغيل المرجعي للمختبر 1.2 على السجلات المئتين. اسأل: ما الذي يجمع بين نمط ما فات المساعد وبين استعلام القاعدة أ في السجل؟ كلاهما يعتمد على العبارة العامة ويغفل أسماء المهن.","minutes":null,"lo":["LO1","LO2"]},{"id":"next","n":34,"title":"اليوم 2: الملخصات والتحليل","kind":"content","session":2,"hash":"f08177e2","md":"#### [day1#next] اليوم 2: الملخصات والتحليل\n\n*التالي*\n\nغدًا تدقّق عشرة ملخصات على أوراقها، ثم تعيد تشغيل دفتر تحليل. جرّب الليلة أن تفتح خدمة دفاتر مستضافة مجانية أو JupyterLab، واحتفظ بسجل استخدام الذكاء الاصطناعي: يكمل غدًا.","notes":"من لم ينهِ المختبر 1.2 يكمله في بيته: مختبرات الغد لا تعتمد عليه. من لم يحضر خط أساس يقيس الليلة مهمة من ملفات المقرر: تلخيص الورقة P09 في مئة كلمة دون مساعد، مثلًا.","minutes":null,"lo":[]}],"activities":[{"id":"check-who-answers-q1","slide":"check-who-answers","type":"single","prompt":"كتب باحث مساعد فقرة في المقدمة بمساعد ذكاء اصطناعي، وفيها مرجع اقترحه المساعد. بعد النشر تبيّن أن المرجع لا وجود له. الورقة عليها ثلاثة مؤلفين. من يُسأل؟","options":[{"key":"أ","text":"الشركة التي تنتج المساعد"},{"key":"ب","text":"الباحث المساعد وحده، لأنه من استعمل الأداة"},{"key":"ج","text":"المؤلفون الثلاثة، لأن أسماءهم على الورقة"},{"key":"د","text":"المحكّمون، لأنهم أجازوا الورقة"}],"correct":[2],"explanation":"المسؤولية على من سُمّي مؤلفًا. والمرجع الذي لم يفتحه أحد منهم محظور في بطاقة المعهد قبل أن يكون خطأ في الورقة.","misconceptions":["يحمّل الأداة مسؤولية لا تستطيع حملها: الأداة لا تُذكر مؤلفًا ولا تُحاسب","يحصر المسؤولية في من ضغط الزر: كل مؤلف مسمّى وافق على النسخة النهائية","","يفترض أن التحكيم يتحقق من كل مرجع: المحكّم يقيّم العمل ولا يضمن مراجعه"],"lo":["LO1"]},{"id":"check-reviewer-and-assistant-q1","slide":"check-reviewer-and-assistant","type":"single","prompt":"تسلّمتَ مقترح منحة للتحكيم، وبقي يومان. تعليمات الجهة المانحة لا تذكر الذكاء الاصطناعي. ما التصرف الذي يتفق مع ما سبق؟","options":[{"key":"أ","text":"تسأل الجهة المانحة كتابةً، ولا يدخل المقترح أي أداة قبل ردّها"},{"key":"ب","text":"ترفعه إلى المساعد، لأن التعليمات لم تمنع ذلك"},{"key":"ج","text":"ترفعه إلى المساعد، ثم تفصح عن ذلك في تقريرك"},{"key":"د","text":"تحذف أسماء الباحثين من المقترح ثم ترفعه"}],"correct":[0],"explanation":"المقترح أمانة عندك. السؤال الثاني في البطاقة يحسم قبل أن نصل إلى الإفصاح.","misconceptions":["","يعدّ السكوت إذنًا: ما لم يُذكر في التعليمات يُسأل عنه، والسرية قائمة في كل حال","يظن أن الإفصاح يبيح المحظور: الإفصاح بعد الرفع إفصاح عن إفشاء وقع","يظن أن حذف الأسماء يرفع السرية: الأفكار والبيانات غير المنشورة هي السر، لا أسماء أصحابها"],"lo":["LO1"]},{"id":"check-rerunnable-row-q1","slide":"check-rerunnable-row","type":"single","prompt":"أربعة باحثين سجّلوا بحثهم في القاعدة نفسها. أي سطر يكفي ليعيد زميل البحث ويعرف أنه نفّذ البحث نفسه؟","options":[{"key":"أ","text":"الكلمات المفتاحية الخمس، والمنصة، والتاريخ، والحدود، وعدد النتائج"},{"key":"ب","text":"«كما في القاعدة السابقة»، والمنصة، والتاريخ، والحدود، وعدد النتائج"},{"key":"ج","text":"وصف المساعد للاستعلام، والمنصة، والتاريخ، والحدود، وعدد النتائج"},{"key":"د","text":"الاستعلام كما نُفّذ حرفيًا، والمنصة، والتاريخ، والحدود، وعدد النتائج"}],"correct":[3],"explanation":"الحقول الأخرى في الأسطر الأربعة سواء. الفرق في الاستعلام: إعادة التنفيذ تحتاج إلى النص الذي قرأته القاعدة نفسه، لا كلماته ولا إحالة إليه ولا وصفًا له.","misconceptions":["يكتفي بالكلمات المفتاحية: دون الروابط والحقول كما كُتبت لا يُعرف ما الذي نُفّذ","يثق بإحالة إلى سطر آخر: «كما سبق» ليس استعلامًا، وكل قاعدة لها صياغتها","يستبدل السجل بوصف المساعد: ما قاله المساعد عن البحث ليس ما نفّذته القاعدة",""],"lo":["LO2"]},{"id":"check-which-number-q1","slide":"check-which-number","type":"single","prompt":"على عينة فيها 20 دراسة تستحق الإدراج: المساعد الأول أدرج 30 سجلًا، منها 19 تستحق. المساعد الثاني أدرج 16 سجلًا، كلها تستحق. أيهما تعتمد للفرز الأول في مراجعة؟","options":[{"key":"أ","text":"الثاني، لأنه لم يدرج أي سجل خطأ"},{"key":"ب","text":"الأول، لأنه أضاع دراسة واحدة من عشرين"},{"key":"ج","text":"الثاني، لأن ما يُقرأ بعده أقل"},{"key":"د","text":"أيهما، فالفرق بينهما يتعادل"}],"correct":[1],"explanation":"استدعاء الأول 19 من 20، واستدعاء الثاني 16 من 20. الأحد عشر سجلًا الزائدة تُقرأ ثم تُستبعد، والدراسات الأربع الضائعة لا تعود.","misconceptions":["يقدّم الدقة على الاستدعاء: الثاني لم يخطئ في ما أدرجه، لكنه أضاع أربع دراسات من عشرين","","يحسب أن قلة ما يُقرأ هي الهدف: الفرز الأول غايته ألا تضيع دراسة، والوقت يأتي بعدها","يظن أن الرقمين يتعادلان: استدعاء 95% مقابل 80% فرق في ما يضيع، لا يعوّضه فرق الدقة"],"lo":["LO2"]}],"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":"day1.md","llms":"../llms.txt"},"tasks":[],"tools":[]},"bridge":{"allowedOrigins":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# الذكاء الاصطناعي للباحثين والعمل العلمي
+
+> تستعين بالذكاء الاصطناعي في البحث والفرز والتلخيص والتحليل، وتبقى كل إحالة متحقَّقًا منها، وكل رقم له مصدر، وكل استخدام مُفصَحًا عنه. مقرر من أكاديمية سدايا، الرمز USE-PRO-208، الإصدار 2027.1.0، بالعربية.
+
+كل شريحة عنوان مثل "#### [day1#slide-id] العنوان": استشهد بالشرائح بهذا المعرّف، وكل استشهاد رابط (slides/day1.html#slide-id). هذه الملفات هي ما يراه المشارك: لا ملاحظات المدرّب فيها ولا مفاتيح الإجابة.
+
+## المقرر
+
+- [صفحة المقرر](https://sdaiaacademy.github.io/use-pro-208/index.md): نظرة عامة ونواتج التعلم والجدول والمختبرات؛ الصفحة نفسها https://sdaiaacademy.github.io/use-pro-208/index.html
+- [المقرر كاملًا](https://sdaiaacademy.github.io/use-pro-208/llms-full.txt): كل وحدة وجلسة وشريحة في ملف واحد، نحو 13,162 من الوحدات النصية
+- [أسئلة التدريب](https://sdaiaacademy.github.io/use-pro-208/practice.html): أسئلة تختبر بها نفسك، مع تعليل بعد كل إجابة
+
+## الشرائح
+
+- [اليوم 1: النزاهة وخريطة الأدبيات](https://sdaiaacademy.github.io/use-pro-208/slides/day1.md): تحكم في اثني عشر استخدامًا للذكاء الاصطناعي ببطاقة سياسة المعهد، ثم توثّق بحثًا وتقيس استدعاء مساعد الفرز على خمسين سجلًا فرزتها بيدك؛ الجلسات: ما يُقبل وما يُفصح عنه وما يُحظر، خريطة الأدبيات: بحث موثّق وفرز يُقاس؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/slides/day1.html؛ نحو 5,592 من الوحدات النصية
+- [اليوم 2: الملخصات والتحليل](https://sdaiaacademy.github.io/use-pro-208/slides/day2.md): تدقّق عشرة ملخصات كتبها المساعد على نصوص أوراقها، ثم تعيد تشغيل تحليل من خطة معلنة مسبقًا وتكتب نتيجته من مخرجاته وحدها؛ الجلسات: اقرأ المصدر لا الملخص، خطة قبل الأمر، وتشغيل نظيف؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/slides/day2.html؛ نحو 5,165 من الوحدات النصية
+- [جلسة المراجعة: جلسة المراجعة: البطاقة والإفصاح والدفتر](https://sdaiaacademy.github.io/use-pro-208/slides/review.md): فحص فردي دون ذكاء اصطناعي على ملخصين، ثم مراجعة مباشرة لكل مشارك مدتها ثماني دقائق يُعاد فيها تشغيل الدفتر؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/slides/review.html؛ نحو 1,760 من الوحدات النصية
+
+## المختبرات
+
+- [المختبر 1.1: تصنيف اثني عشر استخدامًا](https://sdaiaacademy.github.io/use-pro-208/labs/D1_1_classify_uses.md): اليوم 1، الجلسة 1، 45 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/labs/D1_1_classify_uses.html
+- [المختبر 1.2: استدعاء المساعد على خمسين سجلًا](https://sdaiaacademy.github.io/use-pro-208/labs/D1_2_screening_recall.md): اليوم 1، الجلسة 2، 55 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/labs/D1_2_screening_recall.html
+- [المختبر 2.1: تدقيق عشرة ملخصات](https://sdaiaacademy.github.io/use-pro-208/labs/D2_1_audit_summaries.md): اليوم 2، الجلسة 1، 55 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/labs/D2_1_audit_summaries.html
+- [المختبر 2.2: تحليل يُعاد تشغيله نظيفًا](https://sdaiaacademy.github.io/use-pro-208/labs/D2_2_clean_rerun.md): اليوم 2، الجلسة 2، 55 دقيقة؛ الصفحة: https://sdaiaacademy.github.io/use-pro-208/labs/D2_2_clean_rerun.html
+
+## ملفات السياق
+
+- [context/course.md](https://sdaiaacademy.github.io/use-pro-208/context/course.md): المقرر كاملًا، لمساعد يقبل ملفًا مرفقًا، نحو 13,162 من الوحدات النصية
+- [context/day1.md](https://sdaiaacademy.github.io/use-pro-208/context/day1.md): اليوم 1، نحو 5,592 من الوحدات النصية
+- [context/day2.md](https://sdaiaacademy.github.io/use-pro-208/context/day2.md): اليوم 2، نحو 5,165 من الوحدات النصية
+- [context/review.md](https://sdaiaacademy.github.io/use-pro-208/context/review.md): جلسة المراجعة، نحو 1,760 من الوحدات النصية

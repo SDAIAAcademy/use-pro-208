@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.2 · استدعاء المساعد على خمسين سجلًا · الذكاء الاصطناعي للباحثين والعمل العلمي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_2_screening_recall.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.2</span>
+<h1>استدعاء المساعد على خمسين سجلًا</h1>
+<p>توثّق بحثًا واحدًا وتفرز خمسين سجلًا بيدك، وتخرج بسجل بحث وبقياس لاستدعاء المساعد «مُعين» على فرزك</p>
+<div class="meta"><span>55 دقيقة</span><span>اليوم 1</span><span>الجلسة 2: خريطة الأدبيات: بحث موثّق وفرز يُقاس</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>سطر في سجل البحث يستطيع غيرك أن يعيد تنفيذه، وثلاثة نواقص مسمّاة في السجل المسجَّل.</li>
+    <li>ورقة استدعاء: استدعاء المساعد «مُعين» ودقته على خمسين سجلًا فرزتها بيدك، ونمط ما فاته، وقرارك في اعتماده.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/project/scoping_question.txt" target="_blank"><b>project/scoping_question.txt</b><span>سؤال المراجعة الاستكشافية وعناصره، ومعايير الإدراج د1 إلى د3 والاستبعاد س1 إلى س5.</span></a>
+  <a href="files/search/search_log.csv" download><b>search/search_log.csv</b><span>سجل البحث الذي أنتج السجلات المئتين. فيه ثلاثة نواقص.</span></a>
+  <a href="files/search/search_log_template.csv" download><b>search/search_log_template.csv</b><span>سطر فارغ تسجّل فيه بحثك.</span></a>
+  <a href="files/records/sample_50.csv" download><b>records/sample_50.csv</b><span>خمسون سجلًا من المئتين: العنوان والملخص، وعمودان فارغان لقرارك ورمز المعيار.</span></a>
+  <a href="files/records/assistant_screening_200.csv" download><b>records/assistant_screening_200.csv</b><span>قرارات «مُعين» في السجلات المئتين ودرجته وسببه. لا تفتحه قبل الخطوة 4.</span></a>
+  <a href="files/records/recall_sheet.csv" download><b>records/recall_sheet.csv</b><span>ورقة الاستدعاء: تملؤها في الخطوات 4 إلى 6.</span></a>
+  <a href="files/records/retraction_notices.txt" target="_blank"><b>records/retraction_notices.txt</b><span>قائمة إشعارات سحب أوراق.</span></a>
+  <a href="files/records/records_200.csv" download><b>records/records_200.csv</b><span>السجلات المئتان كلها، للمهمة الإضافية.</span></a>
+  <a href="files/ai_use_log.csv" download><b>ai_use_log.csv</b><span>سجل استخدام الذكاء الاصطناعي: يبدأ من هذا المختبر ويرافقك إلى المشروع الختامي.</span></a>
+</div>
+<p class="small">السجلات وقرارات المساعد اصطناعية من صنع المقرر، والسجلات بالعربية ليكون التمرين في الفرز لا في القراءة. <b>سياسة الذكاء الاصطناعي في هذا المختبر: مسموح، وكل استخدام يُسجَّل في <code>ai_use_log.csv</code>.</b> الفرز اليدوي في الخطوة 3 يبقى بيدك: هو المقياس.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ السؤال ومعايير الأهلية، وسمِّ ثلاثة نواقص في سجل البحث المسجَّل <span class="min">8 دقائق</span></h3>
+  <p>اقرأ <code>scoping_question.txt</code>، ثم افتح <code>search_log.csv</code>. لكل سطر اسأل: هل أستطيع أن أعيد هذا البحث غدًا وأعرف أني نفذت البحث نفسه؟</p>
+  <table>
+    <tr><th>ما يلزم في السجل</th><th>لماذا</th></tr>
+    <tr><td>القاعدة والمنصة</td><td>القاعدة نفسها تعطي نتائج مختلفة من منصات مختلفة</td></tr>
+    <tr><td>تاريخ التنفيذ</td><td>القواعد تتغير كل يوم</td></tr>
+    <tr><td>الاستعلام كما نُفّذ، حرفًا حرفًا</td><td>«كما سبق» لا يُعاد تنفيذه</td></tr>
+    <tr><td>الحدود وعدد السجلات</td><td>لتُعرف الأعداد في كل مرحلة</td></tr>
+    <tr><td>طريقة إزالة المكرر وأداتها</td><td>العدد وحده لا يقول ما حُذف</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>2 · نفّذ بحثًا واحدًا في قاعدة مفتوحة وسجّله سطرًا كاملًا <span class="min">10 دقائق</span></h3>
+  <p>اختر قاعدة مفتوحة لا تحتاج إلى حساب (مثل <span class="en">OpenAlex</span> أو <span class="en">PubMed</span>). اكتب استعلامًا من مجموعتين: مرادفات الفئة، ومرادفات المفهوم. نفّذه، ثم انسخ الاستعلام كما نُفّذ والعدد الذي ظهر إلى <code>search_log_template.csv</code> مع القاعدة والمنصة والتاريخ والحدود.</p>
+  <div class="prompt" data-tool="مساعد ذكاء اصطناعي عام">اقترح مرادفات إنجليزية لمجموعتين من مصطلحات البحث: <span class="ph">العاملون في الأماكن المكشوفة</span> و<span class="ph">التعرض للحرارة أثناء العمل</span>. اذكر مع كل مجموعة أسماء مهن ومصطلحات بعينها، ولا تقترح أي مرجع.</div>
+  <p class="small">المساعد يقترح مرادفات فقط. إن استعملته فسجّل ذلك في <code>ai_use_log.csv</code>. عدد النتائج الحقيقي يتغير من يوم إلى يوم، ولا علاقة له بالسجلات المئتين الاصطناعية.</p>
+</div>
+
+<div class="step">
+  <h3>3 · افرز خمسين سجلًا بيدك قبل أن ترى قرارات المساعد <span class="min">18 دقيقة</span></h3>
+  <p>في <code>sample_50.csv</code>: اكتب لكل سجل «يُدرج» أو «يُستبعد»، ومع الاستبعاد رمز المعيار (س1 إلى س5). سجل بلا ملخص وعنوانه يحتمل الإدراج: «يُدرج» ليُقرأ نصه الكامل.</p>
+  <div class="callout warn"><b>لا تفتح ملف المساعد الآن.</b> من يرى قرار المساعد أولًا يميل إليه، فيقيس اتفاقه معه لا استدعاءه.</div>
+</div>
+
+<div class="step">
+  <h3>4 · قارن فرزك بقرارات «مُعين» واحسب الاستدعاء والدقة <span class="min">8 دقائق</span></h3>
+  <p>افتح <code>assistant_screening_200.csv</code> وخذ منه السجلات الخمسين. املأ <code>recall_sheet.csv</code>:</p>
+  <table>
+    <tr><th>الرمز</th><th>ما هو</th></tr>
+    <tr><td>أ</td><td>سجلات أدرجتها أنت من الخمسين</td></tr>
+    <tr><td>ب</td><td>منها ما أدرجه المساعد أيضًا</td></tr>
+    <tr><td>ج</td><td>كل ما أدرجه المساعد من الخمسين</td></tr>
+    <tr><td>الاستدعاء</td><td>ب ÷ أ: كم وجد المساعد مما يستحق الإدراج</td></tr>
+    <tr><td>الدقة</td><td>ب ÷ ج: كم مما أدرجه يستحق الإدراج</td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · سمِّ نمط ما فات المساعد، وافحص قائمة الأوراق المسحوبة <span class="min">6 دقائق</span></h3>
+  <p>اقرأ السجلات التي أدرجتها وفاتت المساعد، واقرأ سببه في كل منها. ما المشترك بينها؟ ثم ابحث عن معرّفات السجلات الخمسين في <code>retraction_notices.txt</code>: هل بينها ورقة مسحوبة؟ وماذا تفعل بها؟</p>
+</div>
+
+<div class="step">
+  <h3>6 · قرّر: هل يُعتمد المساعد لبقية السجلات، وبأي قاعدة توقف؟ <span class="min">5 دقائق</span></h3>
+  <p>اكتب قرارك في آخر سطر من ورقة الاستدعاء: يُعتمد كما هو، أو يُعتمد بشرط (مثل: يُقرأ بيدنا كل سجل بلا ملخص وكل سجل استبعده)، أو لا يُعتمد. ثم سجّل استخدام «مُعين» في <code>ai_use_log.csv</code>: الغرض، وما دخله، وكيف تحققت.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ مهمة إضافية: قاعدة التوقف</h3>
+  <p>رتّب السجلات المئتين تنازليًا بدرجة المساعد، وافرزها بالترتيب مستعينًا بالعناوين. توقف حين يمر خمسون سجلًا متتاليًا بلا دراسة تستحق الإدراج. بعد كم سجل توقفت؟ يعطيك المدرّب عدد الدراسات التي بقيت بعد هذه النقطة.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>أي الرقمين أهم في فرز مراجعة: الاستدعاء أم الدقة؟ ولماذا؟</li>
+  <li>لو رأيت قرارات المساعد قبل أن تفرز، فماذا كان الرقم الذي تحسبه سيقيس؟</li>
+  <li>ورقة مسحوبة تستوفي معايير الإدراج: هل تُحذف من المراجعة بصمت؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل: <code>labs/solutions/screening_reference_50.csv</code> (فرز المراجع الثاني عدي الشماسي، وهو المرجع) و<code>labs/solutions/answer_key.md</code>. التحقق: <code>uv run labs/solutions/check.py 1.2</code>.</li>
+    <li>الأرقام المرجعية على العينة: يستحق الإدراج 14، أدرج المساعد 15، المشترك 11. الاستدعاء 11 من 14، أي 79%. الدقة 11 من 15، أي 73%. استدعاء المشارك يُحسب على فرزه هو، فقد يختلف بسجل أو سجلين: ناقش الاختلاف مع المرجع ولا تفرض المرجع عليه.</li>
+    <li>ما فات المساعد في العينة: R075 وR144 وR171. النمط في المئتين كلها (9 من 46): خمسة سجلات تسمّي مهنة دون عبارة «العاملون في الأماكن المكشوفة»، وثلاثة بلا ملخص، وواحد بلا نمط. الاستدعاء على المئتين 37 من 46، أي 80%.</li>
+    <li>النواقص الثلاثة في سجل البحث: السطر 2 استعلامه «كما في القاعدة أ مع تعديلات بسيطة»، والسطر 3 بلا تاريخ، وإزالة المكرر عدد بلا طريقة ولا أداة. من لاحظ أن استعلام القاعدة أ يخلو من أكثر أسماء المهن فقد وجد أخا النمط نفسه: اربط بين الأمرين.</li>
+    <li>الأوراق المسحوبة: R049 في العينة (تستحق الإدراج وأدرجها المساعد) وR029 خارجها. الجواب: تُسجَّل مسحوبة وتُستبعد من التوليف مع ذكر ذلك، ولا تُحذف بصمت.</li>
+    <li>المهمة الإضافية: قاعدة الخمسين توقف بعد السجل 137 في الترتيب، وقد وُجدت 42 دراسة من 46. تفوت أربع، وآخرها ترتيبه 194. القاعدة وحدها لا تكفي: الإجراءات المنشورة تضم إليها شروطًا أخرى.</li>
+    <li>قرارات «مُعين» ودرجاته كتبها مؤلف المقرر وزرع أخطاءها: لم يفرز هذه السجلات نموذج ولا أداة فرز. من أراد أن يجرّب مساعدًا حقيقيًا على العينة فليفعل بعد الخطوة 3، ويقس استدعاءه بالطريقة نفسها، ويسجّل الاستخدام.</li>
+    <li>الخطوة 2 تحتاج إلى الشبكة. إن حُجبت القاعدة المفتوحة: يكتب المشارك الاستعلام ويملأ السطر كله عدا العدد، ويعرض المدرّب تنفيذًا واحدًا على الشاشة. مثال لسطر كامل في <code>labs/solutions/search_log_row_example.csv</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_1_classify_uses.html" rel="prev">→ المختبر السابق</a><a href="D2_1_audit_summaries.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي للباحثين والعمل العلمي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 151eafb</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T19:31:13Z","version":"2027.1.0","commit":"151eafb"},"course":{"id":"use-pro-208","code":"USE-PRO-208","title":"الذكاء الاصطناعي للباحثين والعمل العلمي","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-208/","repo":"SDAIAAcademy/use-pro-208","home":"../index.html"},"lab":{"id":"1.2","title":"استدعاء المساعد على خمسين سجلًا","summary":"توثّق بحثًا واحدًا وتفرز خمسين سجلًا بيدك، وتخرج بسجل بحث وبقياس لاستدعاء المساعد «مُعين» على فرزك","minutes":55,"day":1,"unit":"اليوم 1","session":2,"deck":"../slides/day1.html#lab-1-2","prev":"D1_1_classify_uses.html","next":"D2_1_audit_summaries.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · تحليل يُعاد تشغيله نظيفًا · الذكاء الاصطناعي للباحثين والعمل العلمي</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_clean_rerun.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>تحليل يُعاد تشغيله نظيفًا</h1>
+<p>تعيد تشغيل دفتر تركه المساعد على سلسلة حرارة عامة، وتخرج بدفتر يعمل من تشغيل نظيف ومعه سجل قرارات</p>
+<div class="meta"><span>55 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: خطة قبل الأمر، وتشغيل نظيف</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>دفتر تحليل يعمل من تشغيل نظيف وينفذ الخطة المعلنة كما هي، ويطبع البصمة نفسها في تشغيلين.</li>
+    <li>سجل قرارات: كل ما وجدته في دفتر المساعد مخالفًا للخطة، وقرارك فيه وسببه.</li>
+    <li>جملة نتيجة مكتوبة من مخرجات الدفتر وحدها.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/analysis/analysis_plan.txt" target="_blank"><b>analysis/analysis_plan.txt</b><span>خطة التحليل المعلنة مسبقًا: تسعة بنود، اعتُمدت قبل فتح ملف الزيارات.</span></a>
+  <a href="files/analysis/heat_analysis.ipynb" download><b>analysis/heat_analysis.ipynb</b><span>الدفتر كما تركه المساعد «مُعين» بعد جلسة عمل. لم يُراجَع.</span></a>
+  <a href="files/analysis/power_daily_2024_raw.csv" download><b>analysis/power_daily_2024_raw.csv</b><span>بيانات حقيقية عامة: سلسلة الحرارة اليومية من <span class="en">NASA POWER</span> كما نُزّلت.</span></a>
+  <a href="files/analysis/clinic_visits_synthetic.csv" download><b>analysis/clinic_visits_synthetic.csv</b><span>بيانات اصطناعية: عدد العاملين في المواقع وعدد الزيارات كل يوم.</span></a>
+  <a href="files/analysis/DATA_SOURCES.txt" target="_blank"><b>analysis/DATA_SOURCES.txt</b><span>مصدر كل ملف، وعنوان طلبه وتاريخ تنزيله، وطريقة الاستشهاد به.</span></a>
+  <a href="files/analysis/decision_log.csv" download><b>analysis/decision_log.csv</b><span>سجل القرارات: تملؤه سطرًا لكل ما تجده.</span></a>
+  <a href="files/analysis/tutor_prompt.txt" target="_blank"><b>analysis/tutor_prompt.txt</b><span>أمر يجعل المساعد معلّمًا يسأل ولا يكتب.</span></a>
+  <a href="files/ai_use_log.csv" download><b>ai_use_log.csv</b><span>سجل استخدام الذكاء الاصطناعي.</span></a>
+</div>
+<p class="small">الدفتر يعمل في <span class="en">JupyterLab</span> أو في خدمة دفاتر مستضافة مجانية: ضع الملفين بجوار الدفتر، أو ارفعهما إلى الخدمة أولًا. يحتاج إلى <span class="en">numpy</span> و<span class="en">pandas</span> فقط. <b>سياسة الذكاء الاصطناعي في هذا المختبر: المساعد معلّم في خطة التحليل، يسأل عن التصميم ولا يكتبه. وله أن يساعد في إصلاح الرموز، ويُسجَّل ذلك.</b></p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ خطة التحليل المعلنة، ودع المساعد المعلّم يسألك عنها <span class="min">8 دقائق</span></h3>
+  <p>اقرأ البنود التسعة. ثم انسخ الأمر إلى المساعد وأجب عن أسئلته من الخطة. إن عدّل الخطة أو اقترح تحليلًا آخر فذكّره بدوره: الخطة لا تتغير في هذه الخطوة.</p>
+  <div class="prompt" data-tool="مساعد ذكاء اصطناعي عام">أنت معلّم إحصاء. سأعرض عليك خطة تحليل. اسألني خمسة أسئلة عن تصميمها، واحدًا واحدًا، وانتظر جوابي بعد كل سؤال: عن تعريف التعرض، والعتبة، والاستبعاد، والنتيجة الأساسية، وما قد يغريني بتغيير الخطة بعد رؤية البيانات. لا تكتب الخطة ولا تعدّلها ولا تقترح تحليلًا بديلًا. <span class="ph">نص الخطة</span></div>
+</div>
+
+<div class="step">
+  <h3>2 · أعد تشغيل الدفتر من أوله وسجّل أين توقف ولماذا <span class="min">7 دقائق</span></h3>
+  <p>قبل أن تشغّل: انظر إلى أرقام التنفيذ بجوار الخلايا، واقرأ جملة النتيجة في آخره. ثم أعد تشغيل النواة وشغّل كل الخلايا من أولها. عند أي خلية توقف؟ انسخ رسالة الخطأ إلى السطر الأول من <code>decision_log.csv</code>.</p>
+  <div class="callout note"><b>المخرجات المحفوظة ليست دليلًا.</b> هي ما طبعته جلسة سابقة، وفي ذاكرتها ما ليس في الدفتر.</div>
+</div>
+
+<div class="step">
+  <h3>3 · قارن الدفتر بالخطة، وسجّل كل انحراف في سجل القرارات <span class="min">12 دقيقة</span></h3>
+  <p>اقرأ الدفتر خلية خلية والخطة بجواره. لكل بند في الخطة (التعرض، والعتبة، والاستبعاد، وإعادة المعاينة والبذرة، والنتيجة الأساسية) اسأل: هل نفّذه الدفتر كما هو؟ سطر في السجل لكل اختلاف: ما وجدته، وما تقوله الخطة ورقم بندها.</p>
+</div>
+
+<div class="step">
+  <h3>4 · أصلح الدفتر: العتبة والاستبعاد من الخطة، والبذرة ثابتة <span class="min">12 دقيقة</span></h3>
+  <p>اجمع قيم الخطة في خلية واحدة ظاهرة قبل أول استعمال لها، ثم عدّل الخلايا لتنفذ الخطة. لك أن تستعين بالمساعد في الرموز: لا يدخله إلا نص الدفتر والخطة. اكتب قرارك وسببه في السجل لكل سطر.</p>
+  <pre class="code"><code class="language-python">THRESHOLD = 45.0      # plan, item 3: T2M_MAX of the same day
+MIN_WORKERS = 200     # plan, item 5
+N_BOOT = 2000         # plan, item 6
+SEED = 208            # plan, item 6</code></pre>
+  <p>ثم ثلاثة أسطر تنفذ الخطة، كل سطر في خليته: الاستبعاد قبل خلية التعرض، والتعرض، والبذرة في خلية إعادة المعاينة.</p>
+  <pre class="code"><code class="language-python">df = df[df["workers_on_site"] &gt;= MIN_WORKERS].reset_index(drop=True)
+df["hot"] = df["T2M_MAX"] &gt;= THRESHOLD
+rng = np.random.default_rng(SEED)</code></pre>
+</div>
+
+<div class="step">
+  <h3>5 · شغّله نظيفًا مرتين وقارن بصمة النتائج <span class="min">8 دقائق</span></h3>
+  <p>أضف في آخر الدفتر خلية تجمع النتائج وتطبع بصمتها، ثم أعد تشغيل النواة وشغّل الكل مرتين. البصمتان متطابقتان؟ إن اختلفتا ففي الدفتر عشوائية بلا بذرة.</p>
+  <pre class="code"><code class="language-python">results = {"days": int(n), "hot_days": int(df["hot"].sum()),
+           "rate_hot": round(float(r_hot), 2),
+           "rate_other": round(float(r_other), 2),
+           "rate_ratio": round(float(rr), 2),
+           "ci_low": round(float(lo), 2), "ci_high": round(float(hi), 2)}
+text = json.dumps(results, sort_keys=True)
+print(text)
+print("fingerprint", hashlib.sha256(text.encode()).hexdigest()[:12])</code></pre>
+</div>
+
+<div class="step">
+  <h3>6 · اكتب جملة النتيجة من مخرجات الدفتر وحدها، وأغلق السجل <span class="min">8 دقائق</span></h3>
+  <p>احذف جملة المساعد واكتب جملتك: عدد الأيام، والمعدلان، ونسبة المعدل وفترة ثقتها، كلها منسوخة من مخرجات التشغيل الأخير. قل ما هي البيانات، ولا تقل «تسبب». ثم أضف في السجل ما فعلته بنتيجة المساعد «الأوضح»، وسجّل استخدامك للمساعد في <code>ai_use_log.csv</code>.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ مهمة إضافية: التحليل الثانوي المعلن</h3>
+  <p>البند 7 في الخطة يعلن تحليلًا ثانويًا: حرارة اليوم السابق بالعتبة نفسها. نفّذه في خلية بعد النتيجة الأساسية، واكتبه في تقريرك «تحليل ثانوي». ما الفرق بينه وبين تعريف المساعد الذي لم يكن في الخطة؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>لماذا عمل الدفتر في جلسة المساعد ولم يعمل عندك؟</li>
+  <li>نتيجة المساعد «أوضح» من نتيجة الخطة. ماذا تفعل بها؟</li>
+  <li>في جملة المساعد رقم لا تطبعه أي خلية. كيف عرفت؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب</summary>
+  <ul>
+    <li>الحل: <code>labs/solutions/heat_analysis_clean.ipynb</code> و<code>labs/solutions/decision_log.csv</code> و<code>labs/solutions/answer_key.md</code>. التحقق: <code>uv run labs/solutions/check.py 2.2</code>، وهو ينفذ الدفترين فعلًا.</li>
+    <li>العيوب الخمسة: المتغير <code>THRESHOLD</code> غير معرّف (التشغيل النظيف يتوقف برسالة <span class="ltr">NameError</span>، وأرقام التنفيذ 1 و2 و3 ثم 14 و15 و16 تدل على خلايا حُذفت)؛ والتعرض بالحرارة الرطبة <code>T2MWET</code> بدل <code>T2M_MAX</code>؛ ولا استبعاد للأيام التي يقل عاملوها عن 200؛ وإعادة المعاينة بلا بذرة؛ وجملة نتيجة فيها 2.4 (من 1.9 إلى 3.0) لا تطبعها أي خلية، وتقول «تسبب».</li>
+    <li>الأرقام المرجعية بعد الإصلاح: 131 يومًا (استُبعد 22)، منها 31 حارًّا. المعدل 2.66 لكل ألف يوم عمل في الأيام الحارة و2.04 في غيرها. نسبة المعدل 1.31 (فترة الثقة 95%: من 0.95 إلى 1.71). البصمة <span class="ltr">8e921892452f</span>. التحليل الثانوي: 1.40 على 130 يومًا، بحرارة اليوم السابق في التقويم من السلسلة الكاملة قبل الاستبعاد.</li>
+    <li>إن سأل باحث عن حدود الخطة: إعادة المعاينة تعامل الأيام كأنها مستقلة والأيام الحارة متتالية، والمقارنة لا تضبط الشهر ولا تأقلم العاملين. هذه حدود تُكتب في القيود، ولا تُعالَج بتغيير التحليل بعد رؤية النتيجة.</li>
+    <li>النتيجة الأساسية غير قاطعة، وهذا مقصود. المخرج المحفوظ في دفتر المساعد 1.71 (من 1.35 إلى 2.14): أوضح، وجاء من تعريف اختير بعد تجربة ستة. الجواب المقبول: الأساسية تبقى كما في الخطة، ونتيجة المساعد تُسجَّل انحرافًا وتُعرض بجوارها إن عُرضت.</li>
+    <li>البصمة تتطابق بين تشغيلَي المشارك دائمًا بعد تثبيت البذرة. قد تختلف عن البصمة المرجعية على إصدار آخر من <span class="en">numpy</span>: المطلوب تطابق التشغيلين، ثم مقارنة الأرقام بالمرجع.</li>
+    <li>أعطال شائعة: الملفان ليسا بجوار الدفتر (الخلية الأولى تقول ذلك)؛ وفي الخدمة المستضافة يُرفع الملفان بعد كل إعادة تشغيل للبيئة؛ ومن عرّف العتبة 20.5 «لأن الدفتر كان يعمل بها» فقد أصلح العطل وأبقى الانحراف.</li>
+    <li>الدفتر كما تركه المساعد كتبه مؤلف المقرر، ومخرجاته المحفوظة من تنفيذ حقيقي للرموز نفسها. لم يعمل عليه نموذج. أمر المساعد المعلّم لم يُجرَّب على مساعد: جرّبه قبل الدفعة.</li>
+    <li>من لا يستطيع تشغيل دفتر: يعمل مع زميل، ويملأ سجل القرارات بنفسه. قراءة الدفتر ومقارنته بالخطة لا تحتاجان إلى تشغيل.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_1_audit_summaries.html" rel="prev">→ المختبر السابق</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي للباحثين والعمل العلمي<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع 151eafb</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T19:31:13Z","version":"2027.1.0","commit":"151eafb"},"course":{"id":"use-pro-208","code":"USE-PRO-208","title":"الذكاء الاصطناعي للباحثين والعمل العلمي","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-pro-208/","repo":"SDAIAAcademy/use-pro-208","home":"../index.html"},"lab":{"id":"2.2","title":"تحليل يُعاد تشغيله نظيفًا","summary":"تعيد تشغيل دفتر تركه المساعد على سلسلة حرارة عامة، وتخرج بدفتر يعمل من تشغيل نظيف ومعه سجل قرارات","minutes":55,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_audit_summaries.html","next":null,"alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
