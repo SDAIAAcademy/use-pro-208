@@ -467,12 +467,15 @@ print("fingerprint", fingerprint)
 '''
 
 C_SECONDARY = '''
-# secondary analysis declared in the plan, item 7: the temperature of the day before, same threshold
+# secondary analysis declared in the plan, item 7: T2M_MAX of the calendar day before, same threshold,
+# read from the full weather series so that the day after an excluded day keeps its true previous day
+prev_tmax = weather.set_index("date")["T2M_MAX"].shift(1, freq="D")
 lag = df.copy()
-lag["hot"] = lag["T2M_MAX"].shift(1) >= THRESHOLD
-lag = lag.iloc[1:]
+lag["prev_tmax"] = lag["date"].map(prev_tmax)
+lag = lag[lag["prev_tmax"].notna()].copy()
+lag["hot"] = lag["prev_tmax"] >= THRESHOLD
 s_hot, s_other, s_rr = rate_ratio(lag)
-print(f"secondary (previous day): rate ratio {s_rr:.2f}, reported as secondary")
+print(f"secondary (previous day): rate ratio {s_rr:.2f} on {len(lag)} days, reported as secondary")
 '''
 
 # the assistant's session, in the order it ran; THRESHOLD lived in a cell that was later deleted

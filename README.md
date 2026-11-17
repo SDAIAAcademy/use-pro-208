@@ -102,6 +102,8 @@ AI for Researchers and Scientific Work
 - [القواعد العامة للاستخدام الثانوي للبيانات (النسخة الإنجليزية)](https://sdaia.gov.sa/Documents/GeneralRulesForSecondaryUseOfData_EN.pdf)
 - [سياسة تصنيف البيانات](https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf)
 - [مبادئ أخلاقيات الذكاء الاصطناعي (سدايا)](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+- [نظام أخلاقيات البحث على المخلوقات الحية (هيئة الخبراء بمجلس الوزراء)](https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/fad7b0d1-e536-46ea-8202-a9a700f28b03/1)
+- [اللجنة الوطنية للأخلاقيات الحيوية](https://ncbe.kacst.gov.sa/ar/)
 - [صفحة الأنظمة والسياسات في موقع سدايا](https://sdaia.gov.sa/ar/SDAIA/about/Pages/RegulationsAndPolicies.aspx)
 
 ### سياسات النشر والإفصاح
@@ -152,5 +154,5 @@ AI for Researchers and Scientific Work
 - القواعد العامة للاستخدام الثانوي للبيانات (النسخة الإنجليزية): https://sdaia.gov.sa/Documents/GeneralRulesForSecondaryUseOfData_EN.pdf
 - سياسة تصنيف البيانات: https://sdaia.gov.sa/ar/SDAIA/about/Documents/DataClassificationPolicyAr.pdf
 - مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا: https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf
-- نظام أخلاقيات البحث على المخلوقات الحية ولائحته التنفيذية: لم يُعثر على عنوان رسمي لنصه يوم إعداد المقرر، فيُذكر هنا باسمه. يُطلب نصه النافذ من لجنة أخلاقيات البحث في المنشأة.
+- نظام أخلاقيات البحث على المخلوقات الحية: https://laws.boe.gov.sa/BoeLaws/Laws/LawDetails/fad7b0d1-e536-46ea-8202-a9a700f28b03/1 (هيئة الخبراء بمجلس الوزراء). لائحته التنفيذية وأدلته في موقع اللجنة الوطنية للأخلاقيات الحيوية: https://ncbe.kacst.gov.sa/ar/
 - النسخة العربية من القواعد العامة للاستخدام الثانوي للبيانات ومن بقية الوثائق: صفحة الأنظمة والسياسات في موقع سدايا، https://sdaia.gov.sa/ar/SDAIA/about/Pages/RegulationsAndPolicies.aspx
