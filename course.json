@@ -9,7 +9,7 @@
     "ar": "الذكاء الاصطناعي للباحثين والعمل العلمي",
     "en": "AI for Researchers and Scientific Work"
   },
-  "tagline": "REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر",
+  "tagline": "تستعين بالذكاء الاصطناعي في البحث والفرز والتلخيص والتحليل، وتبقى كل إحالة متحقَّقًا منها، وكل رقم له مصدر، وكل استخدام مُفصَحًا عنه",
   "description": "يستخدم الباحثون من مختلف التخصصات الذكاء الاصطناعي في مشروع اصطناعي واحد يتناول سؤالًا استكشافيًا عن التعرض للحرارة لدى العاملين في الأماكن المكشوفة، مع 200 سجل مسترجع ومجموعة بيانات عامة، بدءًا بفرز الدراسات والتحقق من الملخصات وانتهاءً بتحليل قابل لإعادة الإنتاج وبيان إفصاح. أما الممارسة البحثية لعلماء الذكاء الاصطناعي فيغطيها المقرر SPC-RSP-301.",
   "track": "fluency",
   "level": 200,
@@ -55,8 +55,8 @@
     }
   ],
   "case_study": {
-    "name": "REPLACE: اسم الجهة الافتراضية التي تعمل عليها كل المختبرات",
-    "summary": "REPLACE: جملتان عن دراسة الحالة وبياناتها الاصطناعية"
+    "name": "معهد هَجير لبحوث الصحة المهنية",
+    "summary": "هَجير معهد بحثي افتراضي يعدّ مراجعة استكشافية عن التعرض للحرارة لدى العاملين في الأماكن المكشوفة. مواد المختبرات اصطناعية ومولّدة ببذرة ثابتة: اثنا عشر استخدامًا للذكاء الاصطناعي تُحكَّم ببطاقة سياسة المعهد، و200 سجل مسترجع مع قرارات المساعد «مُعين» في فرزها، وعشر أوراق مع ملخصاتها، وأعداد زيارات عيادات المواقع. البيانات الحقيقية الوحيدة سلسلة يومية عامة لدرجات الحرارة من مشروع NASA POWER، ويُعاد عليها تحليل معلن الخطة من تشغيل نظيف."
   },
   "format": "workshop",
   "format_note": "ورشة عمل: يومان من المختبرات على حالة اصطناعية واحدة، إضافةً إلى خط أساس متعقَّب",
@@ -72,35 +72,98 @@
     {
       "id": "day1",
       "kind": "day",
-      "title": "REPLACE: موضوع هذه الوحدة في كلمات قليلة",
+      "title": "النزاهة وخريطة الأدبيات",
       "deck": "slides/day1.html",
+      "subtitle": "تحكم في اثني عشر استخدامًا للذكاء الاصطناعي ببطاقة سياسة المعهد، ثم توثّق بحثًا وتقيس استدعاء مساعد الفرز على خمسين سجلًا فرزتها بيدك",
       "sessions": [
         {
-          "title": "REPLACE: عنوان الجلسة 1",
+          "title": "ما يُقبل وما يُفصح عنه وما يُحظر",
+          "summary": "قواعد سوء السلوك البحثي حين يدخل الذكاء الاصطناعي، وقواعد الإفصاح، وسرية المخطوطات والمراجعات، وبيانات المشاركين والبيانات الحكومية وشروط الموافقة الأخلاقية",
+          "minutes": 105,
           "outcomes": [
-            "REPLACE: ما يستطيع المشارك فعله بعد هذه الجلسة؛ واذكر في lo نواتج تعلم المقرر التي تخدمها"
+            "تطبّق قواعد الاختلاق والتزوير والانتحال على مخرجات الذكاء الاصطناعي، وتسمّي من يُسأل عنها",
+            "تفرّق بين استخدام مقبول واستخدام يُفصح عنه واستخدام محظور، وتذكر البند الذي يحكم كل حالة",
+            "تحكم في رفع مخطوطة قيد المراجعة أو بيانات مشاركين إلى مساعد قبل أن يحدث الرفع"
           ],
-          "lo": [],
+          "lo": [
+            "LO1"
+          ],
           "lab": {
             "id": "1.1",
-            "title": "REPLACE: ما يبنيه المشاركون في المختبر 1.1",
-            "summary": "REPLACE: سطر واحد عمّا يبنيه المشاركون ويخرجون به، ثم خطوات المختبر في course.json ومجموع دقائقها 25",
-            "minutes": 25,
-            "href": "D1_1.html"
+            "title": "تصنيف اثني عشر استخدامًا",
+            "minutes": 45,
+            "href": "D1_1_classify_uses.html",
+            "summary": "تصنّف اثني عشر استخدامًا للذكاء الاصطناعي في البحث دون أي مساعد، وتخرج بجدول يذكر البند الحاكم لكل حالة",
+            "steps": [
+              {
+                "text": "اقرأ بطاقة سياسة المعهد وسمِّ أسئلتها الثلاثة",
+                "minutes": 6
+              },
+              {
+                "text": "صنّف الاستخدامات الاثني عشر بيدك: مقبول، أو يُفصح عنه، أو محظور",
+                "minutes": 16
+              },
+              {
+                "text": "اكتب لكل تصنيف البند الذي استندت إليه في البطاقة",
+                "minutes": 8
+              },
+              {
+                "text": "احكم في حالة المخطوطة قيد المراجعة واكتب الرد على المحرر",
+                "minutes": 6
+              },
+              {
+                "text": "صحّح جدولك بالمرجع وناقش ما اختلفتم فيه",
+                "minutes": 9
+              }
+            ],
+            "stretch": "اكتب لكل استخدام «يُفصح عنه» أين يوضع الإفصاح في الورقة وما الذي يذكره"
           }
         },
         {
-          "title": "REPLACE: عنوان الجلسة 2",
+          "title": "خريطة الأدبيات: بحث موثّق وفرز يُقاس",
+          "summary": "استراتيجيات البحث في قواعد البيانات وسجل البحث، والتحقق من المراجع والأوراق المسحوبة، ثم مساعد الفرز: الاستدعاء على عينة فرزتها بيدك، وقواعد التوقف",
+          "minutes": 105,
           "outcomes": [
-            "REPLACE: ما يستطيع المشارك فعله بعد هذه الجلسة؛ واذكر في lo نواتج تعلم المقرر التي تخدمها"
+            "تكتب سطرًا في سجل البحث يستطيع غيرك أن يعيد تنفيذه: القاعدة، والتاريخ، والاستعلام كما نُفّذ، والحدود، وعدد السجلات",
+            "تقيس استدعاء مساعد الفرز ودقته على عينة فرزتها بيدك قبل أن ترى قراراته",
+            "تفحص المراجع والأوراق المسحوبة، وتختار قاعدة توقف وتذكر ما قد يفوت بها"
           ],
-          "lo": [],
+          "lo": [
+            "LO2"
+          ],
           "lab": {
             "id": "1.2",
-            "title": "REPLACE: ما يبنيه المشاركون في المختبر 1.2",
-            "summary": "REPLACE: سطر واحد عمّا يبنيه المشاركون ويخرجون به، ثم خطوات المختبر في course.json ومجموع دقائقها 25",
-            "minutes": 25,
-            "href": "D1_2.html"
+            "title": "استدعاء المساعد على خمسين سجلًا",
+            "minutes": 55,
+            "href": "D1_2_screening_recall.html",
+            "summary": "توثّق بحثًا واحدًا وتفرز خمسين سجلًا بيدك، وتخرج بسجل بحث وبقياس لاستدعاء المساعد «مُعين» على فرزك",
+            "steps": [
+              {
+                "text": "اقرأ السؤال ومعايير الأهلية، وسمِّ ثلاثة نواقص في سجل البحث المسجَّل",
+                "minutes": 8
+              },
+              {
+                "text": "نفّذ بحثًا واحدًا في قاعدة مفتوحة وسجّله سطرًا كاملًا",
+                "minutes": 10
+              },
+              {
+                "text": "افرز خمسين سجلًا بيدك قبل أن ترى قرارات المساعد",
+                "minutes": 18
+              },
+              {
+                "text": "قارن فرزك بقرارات «مُعين» واحسب الاستدعاء والدقة",
+                "minutes": 8
+              },
+              {
+                "text": "سمِّ نمط ما فات المساعد، وافحص قائمة الأوراق المسحوبة",
+                "minutes": 6
+              },
+              {
+                "text": "قرّر: هل يُعتمد المساعد لبقية السجلات، وبأي قاعدة توقف؟",
+                "minutes": 5
+              }
+            ],
+            "stretch": "رتّب السجلات المئتين بدرجة المساعد واحسب أين توقفك قاعدة «خمسون سجلًا متتاليًا بلا دراسة ذات صلة» وكم دراسة تفوتك"
           }
         }
       ]
@@ -108,35 +171,99 @@
     {
       "id": "day2",
       "kind": "day",
-      "title": "REPLACE: موضوع هذه الوحدة في كلمات قليلة",
+      "title": "الملخصات والتحليل",
       "deck": "slides/day2.html",
+      "subtitle": "تدقّق عشرة ملخصات كتبها المساعد على نصوص أوراقها، ثم تعيد تشغيل تحليل من خطة معلنة مسبقًا وتكتب نتيجته من مخرجاته وحدها",
       "sessions": [
         {
-          "title": "REPLACE: عنوان الجلسة 1",
+          "title": "اقرأ المصدر لا الملخص",
+          "summary": "أين ينحرف ملخص المساعد عن الورقة: الفئة المدروسة، والأسلوب، وحجم الأثر، والاستنتاج؛ وجدول تدقيق يربط كل عبارة بمقطعها",
+          "minutes": 105,
           "outcomes": [
-            "REPLACE: ما يستطيع المشارك فعله بعد هذه الجلسة؛ واذكر في lo نواتج تعلم المقرر التي تخدمها"
+            "تسمّي أنواع الخطأ الأربعة في ملخص ورقة: الفئة المدروسة، والأسلوب، وحجم الأثر، والاستنتاج",
+            "تقرأ حجم الأثر في مصدره: المقياس، والاتجاه، وفترة الثقة، والفرق بين النسبي والمطلق",
+            "تدقّق ملخصًا عبارةً عبارة، وتذكر لكل خطأ المقطع الذي يناقضه"
           ],
-          "lo": [],
+          "lo": [
+            "LO3"
+          ],
           "lab": {
             "id": "2.1",
-            "title": "REPLACE: ما يبنيه المشاركون في المختبر 2.1",
-            "summary": "REPLACE: سطر واحد عمّا يبنيه المشاركون ويخرجون به، ثم خطوات المختبر في course.json ومجموع دقائقها 25",
-            "minutes": 25,
-            "href": "D2_1.html"
+            "title": "تدقيق عشرة ملخصات",
+            "minutes": 55,
+            "href": "D2_1_audit_summaries.html",
+            "summary": "تدقّق عشرة ملخصات كتبها «مُعين» على نصوص أوراقها، وتخرج بجدول تدقيق يذكر لكل خطأ المقطع الذي يناقضه",
+            "steps": [
+              {
+                "text": "اقرأ الورقة P01 وملخصها معًا، واملأ السطر الأول مع القاعة",
+                "minutes": 6
+              },
+              {
+                "text": "دقّق الملخصات التسعة الباقية: الفئة، والأسلوب، وحجم الأثر، والاستنتاج",
+                "minutes": 30
+              },
+              {
+                "text": "اكتب لكل خطأ رقم المقطع الذي يناقضه وتصحيحه",
+                "minutes": 8
+              },
+              {
+                "text": "قارن جدولك بالمرجع: ما فاتك، وما حسبته خطأ وهو سليم",
+                "minutes": 6
+              },
+              {
+                "text": "احكم على كل ملخص: يُعتمد أو يُصحَّح أو يُرفض، وسجّل الاستخدام",
+                "minutes": 5
+              }
+            ],
+            "stretch": "اطلب من مساعد حقيقي تلخيص الورقة P03، ودقّق ملخصه بالجدول نفسه"
           }
         },
         {
-          "title": "REPLACE: عنوان الجلسة 2",
+          "title": "خطة قبل الأمر، وتشغيل نظيف",
+          "summary": "خطة تحليل تُعلن قبل أي أمر، ومسارات متشعبة يفتحها المساعد في دقائق، وسجل قرارات، وتشغيل نظيف يعيد النتيجة نفسها، وكتابة لا تخرج عن مخرجاتك",
+          "minutes": 105,
           "outcomes": [
-            "REPLACE: ما يستطيع المشارك فعله بعد هذه الجلسة؛ واذكر في lo نواتج تعلم المقرر التي تخدمها"
+            "تعلن خطة التحليل قبل أول أمر، وتستعمل المساعد معلّمًا يسأل عن التصميم ولا يكتبه",
+            "تكشف الانحراف عن الخطة والمسارات المتشعبة، وتسجّل كل قرار في سجل القرارات",
+            "تعيد إنتاج التحليل من تشغيل نظيف، وتكتب النتيجة من مخرجاتك وحدها"
           ],
-          "lo": [],
+          "lo": [
+            "LO4",
+            "LO5"
+          ],
           "lab": {
             "id": "2.2",
-            "title": "REPLACE: ما يبنيه المشاركون في المختبر 2.2",
-            "summary": "REPLACE: سطر واحد عمّا يبنيه المشاركون ويخرجون به، ثم خطوات المختبر في course.json ومجموع دقائقها 25",
-            "minutes": 25,
-            "href": "D2_2.html"
+            "title": "تحليل يُعاد تشغيله نظيفًا",
+            "minutes": 55,
+            "href": "D2_2_clean_rerun.html",
+            "summary": "تعيد تشغيل دفتر تركه المساعد على سلسلة حرارة عامة، وتخرج بدفتر يعمل من تشغيل نظيف ومعه سجل قرارات",
+            "steps": [
+              {
+                "text": "اقرأ خطة التحليل المعلنة، ودع المساعد المعلّم يسألك عنها",
+                "minutes": 8
+              },
+              {
+                "text": "أعد تشغيل الدفتر من أوله وسجّل أين توقف ولماذا",
+                "minutes": 7
+              },
+              {
+                "text": "قارن الدفتر بالخطة، وسجّل كل انحراف في سجل القرارات",
+                "minutes": 12
+              },
+              {
+                "text": "أصلح الدفتر: العتبة والاستبعاد من الخطة، والبذرة ثابتة",
+                "minutes": 12
+              },
+              {
+                "text": "شغّله نظيفًا مرتين وقارن بصمة النتائج",
+                "minutes": 8
+              },
+              {
+                "text": "اكتب جملة النتيجة من مخرجات الدفتر وحدها، وأغلق السجل",
+                "minutes": 8
+              }
+            ],
+            "stretch": "نفّذ التحليل الثانوي المعلن في الخطة (حرارة اليوم السابق) وسجّله تحليلًا ثانويًا لا بديلًا عن الأساسي"
           }
         }
       ]
@@ -174,6 +301,150 @@
   "checks": {
     "sessions_per_day": 2,
     "session_lab": true,
-    "lab_minutes": 25
-  }
+    "lab_minutes": null
+  },
+  "sources": [
+    {
+      "group": "المرجعيات الوطنية",
+      "items": [
+        {
+          "title": "نظام حماية البيانات الشخصية",
+          "url": "https://sdaia.gov.sa/ar/SDAIA/about/Documents/PersonalDataProtectionLawAr.pdf"
+        },
+        {
+          "title": "اللائحة التنفيذية لنظام حماية البيانات الشخصية",
+          "url": "https://sdaia.gov.sa/ar/SDAIA/about/Documents/ImplementingRegulationPersonalDataProtectionLawAr.pdf"
+        },
+        {
+          "title": "القواعد العامة للاستخدام الثانوي للبيانات (النسخة الإنجليزية)",
+          "url": "https://sdaia.gov.sa/Documents/GeneralRulesForSecondaryUseOfData_EN.pdf"
+        },
+        {
+          "title": "مبادئ أخلاقيات الذكاء الاصطناعي (سدايا)",
+          "url": "https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf"
+        },
+        {
+          "title": "صفحة الأنظمة والسياسات في موقع سدايا",
+          "url": "https://sdaia.gov.sa/ar/SDAIA/about/Pages/RegulationsAndPolicies.aspx"
+        }
+      ]
+    },
+    {
+      "group": "سياسات النشر والإفصاح",
+      "items": [
+        {
+          "title": "ICMJE Recommendations: Artificial Intelligence (AI)",
+          "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/"
+        },
+        {
+          "title": "ICMJE Recommendations: AI Use by Authors",
+          "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-authors.html"
+        },
+        {
+          "title": "ICMJE Recommendations: AI Use by Reviewers",
+          "url": "https://www.icmje.org/recommendations/browse/artificial-intelligence/ai-use-by-reviewers.html"
+        },
+        {
+          "title": "PLOS ONE: Ethical Publishing Practice (Artificial Intelligence Tools and Technologies)",
+          "url": "https://journals.plos.org/plosone/s/ethical-publishing-practice"
+        },
+        {
+          "title": "Elsevier: Generative AI policies for journals",
+          "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals"
+        }
+      ]
+    },
+    {
+      "group": "البحث في الأدبيات والفرز",
+      "items": [
+        {
+          "title": "Rethlefsen et al.: PRISMA-S, an extension to the PRISMA Statement for Reporting Literature Searches in Systematic Reviews (2021)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7839230/"
+        },
+        {
+          "title": "PRISMA for Scoping Reviews (PRISMA-ScR)",
+          "url": "https://www.prisma-statement.org/scoping"
+        },
+        {
+          "title": "Boetje and van de Schoot: The SAFE procedure, a practical stopping heuristic for active learning-based screening (2024)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10908130/"
+        },
+        {
+          "title": "Walters and Wilder: Fabrication and errors in the bibliographic citations generated by ChatGPT (2023)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10484980/"
+        },
+        {
+          "title": "Crossref: Retraction Watch data",
+          "url": "https://www.crossref.org/documentation/retrieve-metadata/retraction-watch/"
+        }
+      ]
+    },
+    {
+      "group": "الملخصات والتحليل",
+      "items": [
+        {
+          "title": "Peters and Chin-Yee: Generalization bias in large language model summarization of scientific research (2025)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12042776/"
+        },
+        {
+          "title": "Gelman and Loken: The garden of forking paths (2013)",
+          "url": "https://sites.stat.columbia.edu/gelman/research/unpublished/p_hacking.pdf"
+        }
+      ]
+    },
+    {
+      "group": "البيانات العامة",
+      "items": [
+        {
+          "title": "NASA POWER: Referencing",
+          "url": "https://power.larc.nasa.gov/docs/referencing/"
+        },
+        {
+          "title": "NASA POWER: API documentation",
+          "url": "https://power.larc.nasa.gov/docs/services/api/"
+        },
+        {
+          "title": "NASA Earthdata: Data Use Guidance",
+          "url": "https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance"
+        }
+      ]
+    },
+    {
+      "group": "الأدوات",
+      "items": [
+        {
+          "title": "OpenAlex: API overview",
+          "url": "https://help.openalex.org/how-to-use-the-api/api-overview"
+        },
+        {
+          "title": "Crossref: REST API",
+          "url": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/"
+        },
+        {
+          "title": "PubMed User Guide",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/help/"
+        },
+        {
+          "title": "ASReview LAB: AI models",
+          "url": "https://asreview.readthedocs.io/en/stable/lab/models.html"
+        },
+        {
+          "title": "Zotero",
+          "url": "https://www.zotero.org/"
+        },
+        {
+          "title": "JabRef",
+          "url": "https://www.jabref.org/"
+        },
+        {
+          "title": "Project Jupyter",
+          "url": "https://jupyter.org/"
+        },
+        {
+          "title": "Quarto",
+          "url": "https://quarto.org/"
+        }
+      ]
+    }
+  ]
 }
