@@ -31,7 +31,7 @@ AI for Researchers and Scientific Work
 |---|---|---|---|
 | اليوم 1 | النزاهة وخريطة الأدبيات | ما يُقبل وما يُفصح عنه وما يُحظر; خريطة الأدبيات: بحث موثّق وفرز يُقاس | [`slides/day1.html`](slides/day1.html) |
 | اليوم 2 | الملخصات والتحليل | اقرأ المصدر لا الملخص; خطة قبل الأمر، وتشغيل نظيف | [`slides/day2.html`](slides/day2.html) |
-| المشروع الختامي | جلسة المراجعة: البطاقة والإفصاح والدفتر |  | [`slides/review.html`](slides/review.html) |
+| جلسة المراجعة | جلسة المراجعة: البطاقة والإفصاح والدفتر |  | [`slides/review.html`](slides/review.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
