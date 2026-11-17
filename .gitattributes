@@ -13,3 +13,6 @@
 *.docx binary
 *.pptx binary
 *.parquet binary
+
+# The public NASA POWER download is kept byte for byte as the service returned it
+labs/files/analysis/power_daily_2024_raw.csv -text

@@ -244,6 +244,33 @@ def lab_2_2() -> str:
         expect("two clean runs print the same fingerprint", prints[0], prints[1])
         expect("the fingerprint of the key", prints[0], k["fingerprint"])
         expect("the results of the key", got, res)
+        # the participant's route: the assistant's notebook repaired with the lines the lab page gives
+        nb = nbformat.read(src / "heat_analysis.ipynb", as_version=4)
+        plan = nbformat.v4.new_code_cell("THRESHOLD = 45.0\nMIN_WORKERS = 200\nN_BOOT = 2000\nSEED = 208\n")
+        cells = []
+        for cell in nb.cells:
+            if cell.cell_type == "code" and 'df["T2MWET"]' in cell.source:
+                cells.append(plan)
+                cell.source = ('df = df[df["workers_on_site"] >= MIN_WORKERS].reset_index(drop=True)\n'
+                               'df["hot"] = df["T2M_MAX"] >= THRESHOLD\n')
+            if cell.cell_type == "code":
+                cell.source = cell.source.replace("default_rng()", "default_rng(SEED)")
+            cells.append(cell)
+        cells.append(nbformat.v4.new_code_cell(
+            'results = {"days": int(n), "hot_days": int(df["hot"].sum()),\n'
+            '           "rate_hot": round(float(r_hot), 2),\n'
+            '           "rate_other": round(float(r_other), 2),\n'
+            '           "rate_ratio": round(float(rr), 2),\n'
+            '           "ci_low": round(float(lo), 2), "ci_high": round(float(hi), 2)}\n'
+            'text = json.dumps(results, sort_keys=True)\n'
+            'print(text)\n'
+            'print("fingerprint", hashlib.sha256(text.encode()).hexdigest()[:12])\n'))
+        nb.cells = cells
+        repaired = work / "repaired.ipynb"
+        nbformat.write(nb, repaired)
+        rep_out = "\n".join(run(repaired, work))
+        expect("the repaired notebook prints the fingerprint of the key",
+               re.search(r"fingerprint (\w+)", rep_out).group(1), k["fingerprint"])
         sec = float(re.search(r"secondary \(previous day\): rate ratio ([\d.]+)", out).group(1))
         expect("secondary rate ratio", sec, k["secondary_rate_ratio"])
 
